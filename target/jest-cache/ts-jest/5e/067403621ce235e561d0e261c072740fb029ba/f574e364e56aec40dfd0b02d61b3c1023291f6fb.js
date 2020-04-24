@@ -1,0 +1,33 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const core_1 = require("@angular/core");
+const ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+const ng_jhipster_1 = require("ng-jhipster");
+const cooperative_service_1 = require("./cooperative.service");
+let CooperativeDeleteDialogComponent = class CooperativeDeleteDialogComponent {
+    constructor(cooperativeService, activeModal, eventManager) {
+        this.cooperativeService = cooperativeService;
+        this.activeModal = activeModal;
+        this.eventManager = eventManager;
+    }
+    cancel() {
+        this.activeModal.dismiss();
+    }
+    confirmDelete(id) {
+        this.cooperativeService.delete(id).subscribe(() => {
+            this.eventManager.broadcast('cooperativeListModification');
+            this.activeModal.close();
+        });
+    }
+};
+CooperativeDeleteDialogComponent = tslib_1.__decorate([
+    core_1.Component({
+        template: require('./cooperative-delete-dialog.component.html')
+    }),
+    tslib_1.__metadata("design:paramtypes", [cooperative_service_1.CooperativeService,
+        ng_bootstrap_1.NgbActiveModal,
+        ng_jhipster_1.JhiEventManager])
+], CooperativeDeleteDialogComponent);
+exports.CooperativeDeleteDialogComponent = CooperativeDeleteDialogComponent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2VudGl0aWVzL2Nvb3BlcmF0aXZlL2Nvb3BlcmF0aXZlLWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50LnRzIiwibWFwcGluZ3MiOiI7OztBQUFBLHdDQUEwQztBQUMxQyw2REFBNEQ7QUFDNUQsNkNBQThDO0FBRzlDLCtEQUEyRDtBQUszRCxJQUFhLGdDQUFnQyxHQUE3QyxNQUFhLGdDQUFnQztJQUczQyxZQUNZLGtCQUFzQyxFQUN6QyxXQUEyQixFQUN4QixZQUE2QjtRQUY3Qix1QkFBa0IsR0FBbEIsa0JBQWtCLENBQW9CO1FBQ3pDLGdCQUFXLEdBQVgsV0FBVyxDQUFnQjtRQUN4QixpQkFBWSxHQUFaLFlBQVksQ0FBaUI7SUFDdEMsQ0FBQztJQUVKLE1BQU07UUFDSixJQUFJLENBQUMsV0FBVyxDQUFDLE9BQU8sRUFBRSxDQUFDO0lBQzdCLENBQUM7SUFFRCxhQUFhLENBQUMsRUFBVTtRQUN0QixJQUFJLENBQUMsa0JBQWtCLENBQUMsTUFBTSxDQUFDLEVBQUUsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxHQUFHLEVBQUU7WUFDaEQsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsNkJBQTZCLENBQUMsQ0FBQztZQUMzRCxJQUFJLENBQUMsV0FBVyxDQUFDLEtBQUssRUFBRSxDQUFDO1FBQzNCLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQztDQUNGLENBQUE7QUFuQlksZ0NBQWdDO0lBSDVDLGdCQUFTLENBQUM7UUFDVCxrQkFBYSw0Q0FBNEMsQ0FBQTtLQUMxRCxDQUFDOzZDQUtnQyx3Q0FBa0I7UUFDNUIsNkJBQWM7UUFDViw2QkFBZTtHQU45QixnQ0FBZ0MsQ0FtQjVDO0FBbkJZLDRFQUFnQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvaG9tZS9hbGkvZXhlbXBsZS1qaGlwc3Rlci90ZXN0YmVkL3NyYy9tYWluL3dlYmFwcC9hcHAvZW50aXRpZXMvY29vcGVyYXRpdmUvY29vcGVyYXRpdmUtZGVsZXRlLWRpYWxvZy5jb21wb25lbnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBOZ2JBY3RpdmVNb2RhbCB9IGZyb20gJ0BuZy1ib290c3RyYXAvbmctYm9vdHN0cmFwJztcbmltcG9ydCB7IEpoaUV2ZW50TWFuYWdlciB9IGZyb20gJ25nLWpoaXBzdGVyJztcblxuaW1wb3J0IHsgSUNvb3BlcmF0aXZlIH0gZnJvbSAnYXBwL3NoYXJlZC9tb2RlbC9jb29wZXJhdGl2ZS5tb2RlbCc7XG5pbXBvcnQgeyBDb29wZXJhdGl2ZVNlcnZpY2UgfSBmcm9tICcuL2Nvb3BlcmF0aXZlLnNlcnZpY2UnO1xuXG5AQ29tcG9uZW50KHtcbiAgdGVtcGxhdGVVcmw6ICcuL2Nvb3BlcmF0aXZlLWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50Lmh0bWwnXG59KVxuZXhwb3J0IGNsYXNzIENvb3BlcmF0aXZlRGVsZXRlRGlhbG9nQ29tcG9uZW50IHtcbiAgY29vcGVyYXRpdmU/OiBJQ29vcGVyYXRpdmU7XG5cbiAgY29uc3RydWN0b3IoXG4gICAgcHJvdGVjdGVkIGNvb3BlcmF0aXZlU2VydmljZTogQ29vcGVyYXRpdmVTZXJ2aWNlLFxuICAgIHB1YmxpYyBhY3RpdmVNb2RhbDogTmdiQWN0aXZlTW9kYWwsXG4gICAgcHJvdGVjdGVkIGV2ZW50TWFuYWdlcjogSmhpRXZlbnRNYW5hZ2VyXG4gICkge31cblxuICBjYW5jZWwoKTogdm9pZCB7XG4gICAgdGhpcy5hY3RpdmVNb2RhbC5kaXNtaXNzKCk7XG4gIH1cblxuICBjb25maXJtRGVsZXRlKGlkOiBudW1iZXIpOiB2b2lkIHtcbiAgICB0aGlzLmNvb3BlcmF0aXZlU2VydmljZS5kZWxldGUoaWQpLnN1YnNjcmliZSgoKSA9PiB7XG4gICAgICB0aGlzLmV2ZW50TWFuYWdlci5icm9hZGNhc3QoJ2Nvb3BlcmF0aXZlTGlzdE1vZGlmaWNhdGlvbicpO1xuICAgICAgdGhpcy5hY3RpdmVNb2RhbC5jbG9zZSgpO1xuICAgIH0pO1xuICB9XG59XG4iXSwidmVyc2lvbiI6M30=

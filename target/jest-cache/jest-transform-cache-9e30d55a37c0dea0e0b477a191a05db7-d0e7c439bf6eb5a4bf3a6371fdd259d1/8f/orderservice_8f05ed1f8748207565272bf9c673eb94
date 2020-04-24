@@ -1,0 +1,466 @@
+3d60563f677486d0a9b225a1edf5a335
+"use strict";
+
+/* istanbul ignore next */
+var cov_2if5xj5ve7 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/order/order.service.ts";
+  var hash = "bd9abb550ea8fcc52c7364a93311acd169c40bc3";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/order/order.service.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 15
+        },
+        end: {
+          line: 5,
+          column: 46
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 24
+        },
+        end: {
+          line: 6,
+          column: 52
+        }
+      },
+      "5": {
+        start: {
+          line: 7,
+          column: 23
+        },
+        end: {
+          line: 7,
+          column: 62
+        }
+      },
+      "6": {
+        start: {
+          line: 8,
+          column: 19
+        },
+        end: {
+          line: 29,
+          column: 1
+        }
+      },
+      "7": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 25
+        }
+      },
+      "8": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 73
+        }
+      },
+      "9": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 80
+        }
+      },
+      "10": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 79
+        }
+      },
+      "11": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 83
+        }
+      },
+      "12": {
+        start: {
+          line: 23,
+          column: 24
+        },
+        end: {
+          line: 23,
+          column: 63
+        }
+      },
+      "13": {
+        start: {
+          line: 24,
+          column: 8
+        },
+        end: {
+          line: 24,
+          column: 89
+        }
+      },
+      "14": {
+        start: {
+          line: 27,
+          column: 8
+        },
+        end: {
+          line: 27,
+          column: 86
+        }
+      },
+      "15": {
+        start: {
+          line: 30,
+          column: 0
+        },
+        end: {
+          line: 33,
+          column: 17
+        }
+      },
+      "16": {
+        start: {
+          line: 34,
+          column: 0
+        },
+        end: {
+          line: 34,
+          column: 36
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 22
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 18
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 18
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        line: 16
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 19,
+            column: 4
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 13
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        line: 19
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 22,
+            column: 4
+          },
+          end: {
+            line: 22,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 22,
+            column: 15
+          },
+          end: {
+            line: 25,
+            column: 5
+          }
+        },
+        line: 22
+      },
+      "5": {
+        name: "(anonymous_5)",
+        decl: {
+          start: {
+            line: 26,
+            column: 4
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 26,
+            column: 15
+          },
+          end: {
+            line: 28,
+            column: 5
+          }
+        },
+        line: 26
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "bd9abb550ea8fcc52c7364a93311acd169c40bc3"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2if5xj5ve7.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_2if5xj5ve7.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_2if5xj5ve7.s[2]++, require("@angular/core"));
+const http_1 =
+/* istanbul ignore next */
+(cov_2if5xj5ve7.s[3]++, require("@angular/common/http"));
+const app_constants_1 =
+/* istanbul ignore next */
+(cov_2if5xj5ve7.s[4]++, require("app/app.constants"));
+const request_util_1 =
+/* istanbul ignore next */
+(cov_2if5xj5ve7.s[5]++, require("app/shared/util/request-util"));
+
+/* istanbul ignore next */
+cov_2if5xj5ve7.s[6]++;
+let OrderService = class OrderService {
+  constructor(http) {
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.f[0]++;
+    cov_2if5xj5ve7.s[7]++;
+    this.http = http;
+
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.s[8]++;
+    this.resourceUrl = app_constants_1.SERVER_API_URL + 'api/orders';
+  }
+
+  create(order) {
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.f[1]++;
+    cov_2if5xj5ve7.s[9]++;
+    return this.http.post(this.resourceUrl, order, {
+      observe: 'response'
+    });
+  }
+
+  update(order) {
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.f[2]++;
+    cov_2if5xj5ve7.s[10]++;
+    return this.http.put(this.resourceUrl, order, {
+      observe: 'response'
+    });
+  }
+
+  find(id) {
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.f[3]++;
+    cov_2if5xj5ve7.s[11]++;
+    return this.http.get(`${this.resourceUrl}/${id}`, {
+      observe: 'response'
+    });
+  }
+
+  query(req) {
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.f[4]++;
+    const options =
+    /* istanbul ignore next */
+    (cov_2if5xj5ve7.s[12]++, request_util_1.createRequestOption(req));
+
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.s[13]++;
+    return this.http.get(this.resourceUrl, {
+      params: options,
+      observe: 'response'
+    });
+  }
+
+  delete(id) {
+    /* istanbul ignore next */
+    cov_2if5xj5ve7.f[5]++;
+    cov_2if5xj5ve7.s[14]++;
+    return this.http.delete(`${this.resourceUrl}/${id}`, {
+      observe: 'response'
+    });
+  }
+
+};
+
+/* istanbul ignore next */
+cov_2if5xj5ve7.s[15]++;
+OrderService = tslib_1.__decorate([core_1.Injectable({
+  providedIn: 'root'
+}), tslib_1.__metadata("design:paramtypes", [http_1.HttpClient])], OrderService);
+
+/* istanbul ignore next */
+cov_2if5xj5ve7.s[16]++;
+exports.OrderService = OrderService;

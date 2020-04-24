@@ -1,0 +1,42 @@
+27e51419295f038ccd7af551d9763e96
+/* istanbul ignore next */
+var cov_j7lqxsg85 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/layouts/main/main.component.html";
+  var hash = "cbc3ccec93b8839c40fa58b97fe4bae3831a1ddc";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/layouts/main/main.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 287
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "cbc3ccec93b8839c40fa58b97fe4bae3831a1ddc"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_j7lqxsg85.s[0]++;
+module.exports = "<jhi-page-ribbon></jhi-page-ribbon>\n\n<div>\n    <router-outlet name=\"navbar\"></router-outlet>\n</div>\n\n<div class=\"container-fluid\">\n    <div class=\"card jh-card\">\n        <router-outlet></router-outlet>\n    </div>\n\n    <jhi-footer></jhi-footer>\n</div>\n";

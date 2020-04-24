@@ -1,0 +1,91 @@
+838429ea6811d53b493799d3c2f3e83c
+"use strict";
+
+/* istanbul ignore next */
+var cov_2d2ph1jf1p = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/shared/constants/error.constants.ts";
+  var hash = "df5fc13124c87a81a2a6ea6dbc73b53a0b76d667";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/shared/constants/error.constants.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 3,
+          column: 63
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 0
+        },
+        end: {
+          line: 4,
+          column: 83
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 0
+        },
+        end: {
+          line: 5,
+          column: 83
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "df5fc13124c87a81a2a6ea6dbc73b53a0b76d667"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2d2ph1jf1p.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_2d2ph1jf1p.s[1]++;
+exports.PROBLEM_BASE_URL = 'https://www.jhipster.tech/problem';
+
+/* istanbul ignore next */
+cov_2d2ph1jf1p.s[2]++;
+exports.EMAIL_ALREADY_USED_TYPE = exports.PROBLEM_BASE_URL + '/email-already-used';
+
+/* istanbul ignore next */
+cov_2d2ph1jf1p.s[3]++;
+exports.LOGIN_ALREADY_USED_TYPE = exports.PROBLEM_BASE_URL + '/login-already-used';

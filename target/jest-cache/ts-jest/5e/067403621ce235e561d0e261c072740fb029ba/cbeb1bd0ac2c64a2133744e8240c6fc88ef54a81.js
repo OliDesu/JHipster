@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/*
+    Languages codes are ISO_639-1 codes, see http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+    They are written in English to avoid character encoding issues (not a perfect solution)
+*/
+exports.LANGUAGES = [
+    'en',
+    'fr'
+    // jhipster-needle-i18n-language-constant - JHipster will add/remove languages in this array
+];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2NvcmUvbGFuZ3VhZ2UvbGFuZ3VhZ2UuY29uc3RhbnRzLnRzIiwibWFwcGluZ3MiOiI7O0FBQUE7OztFQUdFO0FBQ1csUUFBQSxTQUFTLEdBQWE7SUFDakMsSUFBSTtJQUNKLElBQUk7SUFDSiw0RkFBNEY7Q0FDN0YsQ0FBQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvaG9tZS9hbGkvZXhlbXBsZS1qaGlwc3Rlci90ZXN0YmVkL3NyYy9tYWluL3dlYmFwcC9hcHAvY29yZS9sYW5ndWFnZS9sYW5ndWFnZS5jb25zdGFudHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLypcbiAgICBMYW5ndWFnZXMgY29kZXMgYXJlIElTT182MzktMSBjb2Rlcywgc2VlIGh0dHA6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTGlzdF9vZl9JU09fNjM5LTFfY29kZXNcbiAgICBUaGV5IGFyZSB3cml0dGVuIGluIEVuZ2xpc2ggdG8gYXZvaWQgY2hhcmFjdGVyIGVuY29kaW5nIGlzc3VlcyAobm90IGEgcGVyZmVjdCBzb2x1dGlvbilcbiovXG5leHBvcnQgY29uc3QgTEFOR1VBR0VTOiBzdHJpbmdbXSA9IFtcbiAgJ2VuJyxcbiAgJ2ZyJ1xuICAvLyBqaGlwc3Rlci1uZWVkbGUtaTE4bi1sYW5ndWFnZS1jb25zdGFudCAtIEpIaXBzdGVyIHdpbGwgYWRkL3JlbW92ZSBsYW5ndWFnZXMgaW4gdGhpcyBhcnJheVxuXTtcbiJdLCJ2ZXJzaW9uIjozfQ==

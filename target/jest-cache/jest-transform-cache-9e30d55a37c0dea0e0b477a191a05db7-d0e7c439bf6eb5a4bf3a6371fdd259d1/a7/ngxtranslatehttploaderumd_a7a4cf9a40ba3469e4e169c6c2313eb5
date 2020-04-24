@@ -1,0 +1,65 @@
+fcba994022c6c7bc9c44b33be28894ef
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) : typeof define === 'function' && define.amd ? define('@ngx-translate/http-loader', ['exports'], factory) : factory((global['ngx-translate'] = global['ngx-translate'] || {}, global['ngx-translate']['http-loader'] = {}));
+})(this, function (exports) {
+  'use strict';
+  /**
+   * @fileoverview added by tsickle
+   * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+   */
+
+  var TranslateHttpLoader =
+  /** @class */
+  function () {
+    function TranslateHttpLoader(http, prefix, suffix) {
+      if (prefix === void 0) {
+        prefix = "/assets/i18n/";
+      }
+
+      if (suffix === void 0) {
+        suffix = ".json";
+      }
+
+      this.http = http;
+      this.prefix = prefix;
+      this.suffix = suffix;
+    }
+    /**
+     * Gets the translations from the server
+     */
+
+    /**
+     * Gets the translations from the server
+     * @param {?} lang
+     * @return {?}
+     */
+
+
+    TranslateHttpLoader.prototype.getTranslation =
+    /**
+    * Gets the translations from the server
+    * @param {?} lang
+    * @return {?}
+    */
+    function (lang) {
+      return this.http.get("" + this.prefix + lang + this.suffix);
+    };
+
+    return TranslateHttpLoader;
+  }();
+  /**
+   * @fileoverview added by tsickle
+   * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+   */
+
+  /**
+   * @fileoverview added by tsickle
+   * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+   */
+
+
+  exports.TranslateHttpLoader = TranslateHttpLoader;
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+});

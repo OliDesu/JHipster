@@ -1,0 +1,42 @@
+a12ff446b017e9d9bb840ebcf2fc2841
+/* istanbul ignore next */
+var cov_2h348djypm = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/health/health.component.html";
+  var hash = "309b043b922d9ba1a8ab60fab179269942b6ec64";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/health/health.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 1878
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "309b043b922d9ba1a8ab60fab179269942b6ec64"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2h348djypm.s[0]++;
+module.exports = "<div>\n    <h2>\n        <span id=\"health-page-heading\" jhiTranslate=\"health.title\">Health Checks</span>\n\n        <button class=\"btn btn-primary float-right\" (click)=\"refresh()\">\n            <fa-icon icon=\"sync\"></fa-icon> <span jhiTranslate=\"health.refresh.button\">Refresh</span>\n        </button>\n    </h2>\n\n    <div class=\"table-responsive\">\n        <table id=\"healthCheck\" class=\"table table-striped\" aria-describedby=\"health-page-heading\">\n            <thead>\n                <tr>\n                    <th scope=\"col\" jhiTranslate=\"health.table.service\">Service Name</th>\n                    <th scope=\"col\" class=\"text-center\" jhiTranslate=\"health.table.status\">Status</th>\n                    <th scope=\"col\" class=\"text-center\" jhiTranslate=\"health.details.details\">Details</th>\n                </tr>\n            </thead>\n            <tbody *ngIf=\"health\">\n                <tr *ngFor=\"let componentHealth of health.components | keys\">\n                    <td>\n                        {{ 'health.indicator.' + componentHealth.key | translate }}\n                    </td>\n                    <td class=\"text-center\">\n                        <span class=\"badge\" [ngClass]=\"getBadgeClass(componentHealth.value.status)\" jhiTranslate=\"{{ 'health.status.' + componentHealth.value.status }}\">\n                            {{ componentHealth.value.status }}\n                        </span>\n                    </td>\n                    <td class=\"text-center\">\n                        <a class=\"hand\" (click)=\"showHealth(componentHealth)\" *ngIf=\"componentHealth.value.details\">\n                            <fa-icon icon=\"eye\"></fa-icon>\n                        </a>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>\n";

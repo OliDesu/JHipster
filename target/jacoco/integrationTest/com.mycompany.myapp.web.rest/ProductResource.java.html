@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coopcycle</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.myapp.web.rest</a> &gt; <span class="el_source">ProductResource.java</span></div><h1>ProductResource.java</h1><pre class="source lang-java linenums">package com.mycompany.myapp.web.rest;
+
+import com.mycompany.myapp.domain.Product;
+import com.mycompany.myapp.repository.ProductRepository;
+import com.mycompany.myapp.web.rest.errors.BadRequestAlertException;
+
+import io.github.jhipster.web.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing {@link com.mycompany.myapp.domain.Product}.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+@Transactional
+public class ProductResource {
+
+<span class="fc" id="L30">    private final Logger log = LoggerFactory.getLogger(ProductResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;product&quot;;
+
+    @Value(&quot;${jhipster.clientApp.name}&quot;)
+    private String applicationName;
+
+    private final ProductRepository productRepository;
+
+<span class="fc" id="L39">    public ProductResource(ProductRepository productRepository) {</span>
+<span class="fc" id="L40">        this.productRepository = productRepository;</span>
+<span class="fc" id="L41">    }</span>
+
+    /**
+     * {@code POST  /products} : Create a new product.
+     *
+     * @param product the product to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new product, or with status {@code 400 (Bad Request)} if the product has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping(&quot;/products&quot;)
+    public ResponseEntity&lt;Product&gt; createProduct(@Valid @RequestBody Product product) throws URISyntaxException {
+<span class="fc" id="L52">        log.debug(&quot;REST request to save Product : {}&quot;, product);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (product.getId() != null) {</span>
+<span class="fc" id="L54">            throw new BadRequestAlertException(&quot;A new product cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L56">        Product result = productRepository.save(product);</span>
+<span class="fc" id="L57">        return ResponseEntity.created(new URI(&quot;/api/products/&quot; + result.getId()))</span>
+<span class="fc" id="L58">            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L59">            .body(result);</span>
+    }
+
+    /**
+     * {@code PUT  /products} : Updates an existing product.
+     *
+     * @param product the product to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated product,
+     * or with status {@code 400 (Bad Request)} if the product is not valid,
+     * or with status {@code 500 (Internal Server Error)} if the product couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PutMapping(&quot;/products&quot;)
+    public ResponseEntity&lt;Product&gt; updateProduct(@Valid @RequestBody Product product) throws URISyntaxException {
+<span class="fc" id="L73">        log.debug(&quot;REST request to update Product : {}&quot;, product);</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        if (product.getId() == null) {</span>
+<span class="fc" id="L75">            throw new BadRequestAlertException(&quot;Invalid id&quot;, ENTITY_NAME, &quot;idnull&quot;);</span>
+        }
+<span class="fc" id="L77">        Product result = productRepository.save(product);</span>
+<span class="fc" id="L78">        return ResponseEntity.ok()</span>
+<span class="fc" id="L79">            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, product.getId().toString()))</span>
+<span class="fc" id="L80">            .body(result);</span>
+    }
+
+    /**
+     * {@code GET  /products} : get all the products.
+     *
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of products in body.
+     */
+    @GetMapping(&quot;/products&quot;)
+    public List&lt;Product&gt; getAllProducts() {
+<span class="fc" id="L90">        log.debug(&quot;REST request to get all Products&quot;);</span>
+<span class="fc" id="L91">        return productRepository.findAll();</span>
+    }
+
+    /**
+     * {@code GET  /products/:id} : get the &quot;id&quot; product.
+     *
+     * @param id the id of the product to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the product, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping(&quot;/products/{id}&quot;)
+    public ResponseEntity&lt;Product&gt; getProduct(@PathVariable Long id) {
+<span class="fc" id="L102">        log.debug(&quot;REST request to get Product : {}&quot;, id);</span>
+<span class="fc" id="L103">        Optional&lt;Product&gt; product = productRepository.findById(id);</span>
+<span class="fc" id="L104">        return ResponseUtil.wrapOrNotFound(product);</span>
+    }
+
+    /**
+     * {@code DELETE  /products/:id} : delete the &quot;id&quot; product.
+     *
+     * @param id the id of the product to delete.
+     * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
+     */
+    @DeleteMapping(&quot;/products/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deleteProduct(@PathVariable Long id) {
+<span class="fc" id="L115">        log.debug(&quot;REST request to delete Product : {}&quot;, id);</span>
+<span class="fc" id="L116">        productRepository.deleteById(id);</span>
+<span class="fc" id="L117">        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

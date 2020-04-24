@@ -1,0 +1,529 @@
+03e83b989d26e11ff6da7094a1d702fc
+"use strict";
+
+/* istanbul ignore next */
+var cov_1xltxgyhc = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/health/health-modal.component.ts";
+  var hash = "cd6e19cb1ad16898a68c5725cddb159760bbc6d1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/health/health-modal.component.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 23
+        },
+        end: {
+          line: 5,
+          column: 60
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 27
+        },
+        end: {
+          line: 32,
+          column: 1
+        }
+      },
+      "5": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 39
+        }
+      },
+      "6": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 21,
+          column: 9
+        }
+      },
+      "7": {
+        start: {
+          line: 13,
+          column: 24
+        },
+        end: {
+          line: 13,
+          column: 42
+        }
+      },
+      "8": {
+        start: {
+          line: 14,
+          column: 12
+        },
+        end: {
+          line: 20,
+          column: 13
+        }
+      },
+      "9": {
+        start: {
+          line: 16,
+          column: 16
+        },
+        end: {
+          line: 16,
+          column: 46
+        }
+      },
+      "10": {
+        start: {
+          line: 19,
+          column: 16
+        },
+        end: {
+          line: 19,
+          column: 60
+        }
+      },
+      "11": {
+        start: {
+          line: 22,
+          column: 8
+        },
+        end: {
+          line: 27,
+          column: 9
+        }
+      },
+      "12": {
+        start: {
+          line: 23,
+          column: 12
+        },
+        end: {
+          line: 23,
+          column: 41
+        }
+      },
+      "13": {
+        start: {
+          line: 26,
+          column: 12
+        },
+        end: {
+          line: 26,
+          column: 36
+        }
+      },
+      "14": {
+        start: {
+          line: 30,
+          column: 8
+        },
+        end: {
+          line: 30,
+          column: 35
+        }
+      },
+      "15": {
+        start: {
+          line: 33,
+          column: 0
+        },
+        end: {
+          line: 39,
+          column: 25
+        }
+      },
+      "16": {
+        start: {
+          line: 40,
+          column: 0
+        },
+        end: {
+          line: 40,
+          column: 52
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 29
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 25
+          },
+          end: {
+            line: 28,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 29,
+            column: 4
+          },
+          end: {
+            line: 29,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 29,
+            column: 14
+          },
+          end: {
+            line: 31,
+            column: 5
+          }
+        },
+        line: 29
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 11,
+            column: 8
+          },
+          end: {
+            line: 21,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 11,
+            column: 8
+          },
+          end: {
+            line: 21,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 8
+          },
+          end: {
+            line: 21,
+            column: 9
+          }
+        }],
+        line: 11
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 11,
+            column: 12
+          },
+          end: {
+            line: 11,
+            column: 58
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 11,
+            column: 12
+          },
+          end: {
+            line: 11,
+            column: 23
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 27
+          },
+          end: {
+            line: 11,
+            column: 58
+          }
+        }],
+        line: 11
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 14,
+            column: 12
+          },
+          end: {
+            line: 20,
+            column: 13
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 14,
+            column: 12
+          },
+          end: {
+            line: 20,
+            column: 13
+          }
+        }, {
+          start: {
+            line: 14,
+            column: 12
+          },
+          end: {
+            line: 20,
+            column: 13
+          }
+        }],
+        line: 14
+      },
+      "3": {
+        loc: {
+          start: {
+            line: 22,
+            column: 8
+          },
+          end: {
+            line: 27,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 22,
+            column: 8
+          },
+          end: {
+            line: 27,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 22,
+            column: 8
+          },
+          end: {
+            line: 27,
+            column: 9
+          }
+        }],
+        line: 22
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0],
+      "2": [0, 0],
+      "3": [0, 0]
+    },
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "cd6e19cb1ad16898a68c5725cddb159760bbc6d1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1xltxgyhc.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_1xltxgyhc.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_1xltxgyhc.s[2]++, require("@angular/core"));
+const ng_bootstrap_1 =
+/* istanbul ignore next */
+(cov_1xltxgyhc.s[3]++, require("@ng-bootstrap/ng-bootstrap"));
+
+/* istanbul ignore next */
+cov_1xltxgyhc.s[4]++;
+let HealthModalComponent = class HealthModalComponent {
+  constructor(activeModal) {
+    /* istanbul ignore next */
+    cov_1xltxgyhc.f[0]++;
+    cov_1xltxgyhc.s[5]++;
+    this.activeModal = activeModal;
+  }
+
+  readableValue(value) {
+    /* istanbul ignore next */
+    cov_1xltxgyhc.f[1]++;
+    cov_1xltxgyhc.s[6]++;
+
+    if (
+    /* istanbul ignore next */
+    (cov_1xltxgyhc.b[1][0]++, this.health) &&
+    /* istanbul ignore next */
+    (cov_1xltxgyhc.b[1][1]++, this.health.key === 'diskSpace')) {
+      /* istanbul ignore next */
+      cov_1xltxgyhc.b[0][0]++;
+      // Should display storage space in an human readable unit
+      const val =
+      /* istanbul ignore next */
+      (cov_1xltxgyhc.s[7]++, value / 1073741824);
+
+      /* istanbul ignore next */
+      cov_1xltxgyhc.s[8]++;
+
+      if (val > 1) {
+        /* istanbul ignore next */
+        cov_1xltxgyhc.b[2][0]++;
+        cov_1xltxgyhc.s[9]++;
+        // Value
+        return val.toFixed(2) + ' GB';
+      } else {
+        /* istanbul ignore next */
+        cov_1xltxgyhc.b[2][1]++;
+        cov_1xltxgyhc.s[10]++;
+        return (value / 1048576).toFixed(2) + ' MB';
+      }
+    } else
+    /* istanbul ignore next */
+    {
+      cov_1xltxgyhc.b[0][1]++;
+    }
+
+    cov_1xltxgyhc.s[11]++;
+
+    if (typeof value === 'object') {
+      /* istanbul ignore next */
+      cov_1xltxgyhc.b[3][0]++;
+      cov_1xltxgyhc.s[12]++;
+      return JSON.stringify(value);
+    } else {
+      /* istanbul ignore next */
+      cov_1xltxgyhc.b[3][1]++;
+      cov_1xltxgyhc.s[13]++;
+      return value.toString();
+    }
+  }
+
+  dismiss() {
+    /* istanbul ignore next */
+    cov_1xltxgyhc.f[2]++;
+    cov_1xltxgyhc.s[14]++;
+    this.activeModal.dismiss();
+  }
+
+};
+
+/* istanbul ignore next */
+cov_1xltxgyhc.s[15]++;
+HealthModalComponent = tslib_1.__decorate([core_1.Component({
+  selector: 'jhi-health-modal',
+  template: require('./health-modal.component.html')
+}), tslib_1.__metadata("design:paramtypes", [ng_bootstrap_1.NgbActiveModal])], HealthModalComponent);
+
+/* istanbul ignore next */
+cov_1xltxgyhc.s[16]++;
+exports.HealthModalComponent = HealthModalComponent;

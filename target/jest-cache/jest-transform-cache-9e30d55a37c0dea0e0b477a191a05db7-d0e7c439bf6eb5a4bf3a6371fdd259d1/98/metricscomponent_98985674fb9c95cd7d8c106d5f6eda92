@@ -1,0 +1,632 @@
+bdd0cb05cde1b4d3a44262490f1cc496
+"use strict";
+
+/* istanbul ignore next */
+var cov_1gzz2n3c7i = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/metrics/metrics.component.ts";
+  var hash = "12d8244a3f6e556fc69d8ce18247a4747cf419ac";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/metrics/metrics.component.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 20
+        },
+        end: {
+          line: 5,
+          column: 45
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 26
+        },
+        end: {
+          line: 6,
+          column: 54
+        }
+      },
+      "5": {
+        start: {
+          line: 7,
+          column: 23
+        },
+        end: {
+          line: 34,
+          column: 1
+        }
+      },
+      "6": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 45
+        }
+      },
+      "7": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 45
+        }
+      },
+      "8": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 36
+        }
+      },
+      "9": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 23
+        }
+      },
+      "10": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 36
+        }
+      },
+      "11": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 26,
+          column: 25
+        }
+      },
+      "12": {
+        start: {
+          line: 20,
+          column: 44
+        },
+        end: {
+          line: 20,
+          column: 76
+        }
+      },
+      "13": {
+        start: {
+          line: 21,
+          column: 12
+        },
+        end: {
+          line: 21,
+          column: 35
+        }
+      },
+      "14": {
+        start: {
+          line: 22,
+          column: 12
+        },
+        end: {
+          line: 22,
+          column: 46
+        }
+      },
+      "15": {
+        start: {
+          line: 23,
+          column: 12
+        },
+        end: {
+          line: 23,
+          column: 41
+        }
+      },
+      "16": {
+        start: {
+          line: 24,
+          column: 12
+        },
+        end: {
+          line: 24,
+          column: 48
+        }
+      },
+      "17": {
+        start: {
+          line: 29,
+          column: 8
+        },
+        end: {
+          line: 29,
+          column: 49
+        }
+      },
+      "18": {
+        start: {
+          line: 32,
+          column: 8
+        },
+        end: {
+          line: 32,
+          column: 95
+        }
+      },
+      "19": {
+        start: {
+          line: 35,
+          column: 0
+        },
+        end: {
+          line: 42,
+          column: 21
+        }
+      },
+      "20": {
+        start: {
+          line: 43,
+          column: 0
+        },
+        end: {
+          line: 43,
+          column: 44
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 48
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 15
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 14
+          },
+          end: {
+            line: 27,
+            column: 5
+          }
+        },
+        line: 16
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 20,
+            column: 38
+          },
+          end: {
+            line: 20,
+            column: 39
+          }
+        },
+        loc: {
+          start: {
+            line: 20,
+            column: 44
+          },
+          end: {
+            line: 20,
+            column: 76
+          }
+        },
+        line: 20
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 20,
+            column: 78
+          },
+          end: {
+            line: 20,
+            column: 79
+          }
+        },
+        loc: {
+          start: {
+            line: 20,
+            column: 103
+          },
+          end: {
+            line: 25,
+            column: 9
+          }
+        },
+        line: 20
+      },
+      "5": {
+        name: "(anonymous_5)",
+        decl: {
+          start: {
+            line: 28,
+            column: 4
+          },
+          end: {
+            line: 28,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 28,
+            column: 26
+          },
+          end: {
+            line: 30,
+            column: 5
+          }
+        },
+        line: 28
+      },
+      "6": {
+        name: "(anonymous_6)",
+        decl: {
+          start: {
+            line: 31,
+            column: 4
+          },
+          end: {
+            line: 31,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 31,
+            column: 43
+          },
+          end: {
+            line: 33,
+            column: 5
+          }
+        },
+        line: 31
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 29,
+            column: 15
+          },
+          end: {
+            line: 29,
+            column: 48
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 29,
+            column: 15
+          },
+          end: {
+            line: 29,
+            column: 27
+          }
+        }, {
+          start: {
+            line: 29,
+            column: 31
+          },
+          end: {
+            line: 29,
+            column: 48
+          }
+        }],
+        line: 29
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 32,
+            column: 15
+          },
+          end: {
+            line: 32,
+            column: 94
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 32,
+            column: 15
+          },
+          end: {
+            line: 32,
+            column: 27
+          }
+        }, {
+          start: {
+            line: 32,
+            column: 31
+          },
+          end: {
+            line: 32,
+            column: 48
+          }
+        }, {
+          start: {
+            line: 32,
+            column: 52
+          },
+          end: {
+            line: 32,
+            column: 94
+          }
+        }],
+        line: 32
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0, 0]
+    },
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "12d8244a3f6e556fc69d8ce18247a4747cf419ac"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1gzz2n3c7i.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_1gzz2n3c7i.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_1gzz2n3c7i.s[2]++, require("@angular/core"));
+const operators_1 =
+/* istanbul ignore next */
+(cov_1gzz2n3c7i.s[3]++, require("rxjs/operators"));
+const metrics_service_1 =
+/* istanbul ignore next */
+(cov_1gzz2n3c7i.s[4]++, require("./metrics.service"));
+
+/* istanbul ignore next */
+cov_1gzz2n3c7i.s[5]++;
+let MetricsComponent = class MetricsComponent {
+  constructor(metricsService, changeDetector) {
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.f[0]++;
+    cov_1gzz2n3c7i.s[6]++;
+    this.metricsService = metricsService;
+
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.s[7]++;
+    this.changeDetector = changeDetector;
+
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.s[8]++;
+    this.updatingMetrics = true;
+  }
+
+  ngOnInit() {
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.f[1]++;
+    cov_1gzz2n3c7i.s[9]++;
+    this.refresh();
+  }
+
+  refresh() {
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.f[2]++;
+    cov_1gzz2n3c7i.s[10]++;
+    this.updatingMetrics = true;
+
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.s[11]++;
+    this.metricsService.getMetrics().pipe(operators_1.flatMap(() => {
+      /* istanbul ignore next */
+      cov_1gzz2n3c7i.f[3]++;
+      cov_1gzz2n3c7i.s[12]++;
+      return this.metricsService.threadDump();
+    }, (metrics, threadDump) => {
+      /* istanbul ignore next */
+      cov_1gzz2n3c7i.f[4]++;
+      cov_1gzz2n3c7i.s[13]++;
+      this.metrics = metrics;
+
+      /* istanbul ignore next */
+      cov_1gzz2n3c7i.s[14]++;
+      this.threads = threadDump.threads;
+
+      /* istanbul ignore next */
+      cov_1gzz2n3c7i.s[15]++;
+      this.updatingMetrics = false;
+
+      /* istanbul ignore next */
+      cov_1gzz2n3c7i.s[16]++;
+      this.changeDetector.detectChanges();
+    })).subscribe();
+  }
+
+  metricsKeyExists(key) {
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.f[5]++;
+    cov_1gzz2n3c7i.s[17]++;
+    return (
+      /* istanbul ignore next */
+      (cov_1gzz2n3c7i.b[0][0]++, this.metrics) &&
+      /* istanbul ignore next */
+      (cov_1gzz2n3c7i.b[0][1]++, this.metrics[key])
+    );
+  }
+
+  metricsKeyExistsAndObjectNotEmpty(key) {
+    /* istanbul ignore next */
+    cov_1gzz2n3c7i.f[6]++;
+    cov_1gzz2n3c7i.s[18]++;
+    return (
+      /* istanbul ignore next */
+      (cov_1gzz2n3c7i.b[1][0]++, this.metrics) &&
+      /* istanbul ignore next */
+      (cov_1gzz2n3c7i.b[1][1]++, this.metrics[key]) &&
+      /* istanbul ignore next */
+      (cov_1gzz2n3c7i.b[1][2]++, JSON.stringify(this.metrics[key]) !== '{}')
+    );
+  }
+
+};
+
+/* istanbul ignore next */
+cov_1gzz2n3c7i.s[19]++;
+MetricsComponent = tslib_1.__decorate([core_1.Component({
+  selector: 'jhi-metrics',
+  template: require('./metrics.component.html'),
+  changeDetection: core_1.ChangeDetectionStrategy.OnPush
+}), tslib_1.__metadata("design:paramtypes", [metrics_service_1.MetricsService, core_1.ChangeDetectorRef])], MetricsComponent);
+
+/* istanbul ignore next */
+cov_1gzz2n3c7i.s[20]++;
+exports.MetricsComponent = MetricsComponent;

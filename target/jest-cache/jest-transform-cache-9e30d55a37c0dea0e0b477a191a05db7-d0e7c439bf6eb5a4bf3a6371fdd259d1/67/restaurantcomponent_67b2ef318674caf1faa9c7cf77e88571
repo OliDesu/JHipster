@@ -1,0 +1,42 @@
+b2e02c77f91354a36725a3808bb802a5
+/* istanbul ignore next */
+var cov_2r11jb3z91 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/restaurant/restaurant.component.html";
+  var hash = "ed4ebdf22bbcd08c18dd6f2d1b92f801828a3d13";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/restaurant/restaurant.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 3435
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "ed4ebdf22bbcd08c18dd6f2d1b92f801828a3d13"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2r11jb3z91.s[0]++;
+module.exports = "<div>\n    <h2 id=\"page-heading\">\n        <span jhiTranslate=\"coopcycleApp.restaurant.home.title\">Restaurants</span>\n\n        <button id=\"jh-create-entity\" class=\"btn btn-primary float-right jh-create-entity create-restaurant\" [routerLink]=\"['/restaurant/new']\">\n            <fa-icon icon=\"plus\"></fa-icon>\n            <span  jhiTranslate=\"coopcycleApp.restaurant.home.createLabel\">\n            Create a new Restaurant\n            </span>\n        </button>\n    </h2>\n\n    <jhi-alert-error></jhi-alert-error>\n\n    <jhi-alert></jhi-alert>\n\n    <div class=\"alert alert-warning\" id=\"no-result\" *ngIf=\"restaurants?.length === 0\">\n        <span jhiTranslate=\"coopcycleApp.restaurant.home.notFound\">No restaurants found</span>\n    </div>\n\n    <div class=\"table-responsive\" id=\"entities\" *ngIf=\"restaurants?.length > 0\">\n        <table class=\"table table-striped\" aria-describedby=\"page-heading\">\n            <thead>\n                <tr>\n                    <th scope=\"col\" ><span jhiTranslate=\"global.field.id\">ID</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.restaurant.restaurantId\">Restaurant Id</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.restaurant.name\">Name</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.restaurant.description\">Description</span></th>\n                    <th scope=\"col\"></th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let restaurant of restaurants ;trackBy: trackId\">\n                    <td><a [routerLink]=\"['/restaurant', restaurant.id, 'view']\">{{ restaurant.id }}</a></td>\n                    <td>{{ restaurant.restaurantId }}</td>\n                    <td>{{ restaurant.name }}</td>\n                    <td>{{ restaurant.description }}</td>\n                    <td class=\"text-right\">\n                        <div class=\"btn-group\">\n                            <button type=\"submit\"\n                                    [routerLink]=\"['/restaurant', restaurant.id, 'view']\"\n                                    class=\"btn btn-info btn-sm\">\n                                <fa-icon icon=\"eye\"></fa-icon>\n                                <span class=\"d-none d-md-inline\" jhiTranslate=\"entity.action.view\">View</span>\n                            </button>\n\n                            <button type=\"submit\"\n                                    [routerLink]=\"['/restaurant', restaurant.id, 'edit']\"\n                                    class=\"btn btn-primary btn-sm\">\n                                <fa-icon icon=\"pencil-alt\"></fa-icon>\n                                <span class=\"d-none d-md-inline\" jhiTranslate=\"entity.action.edit\">Edit</span>\n                            </button>\n\n                            <button type=\"submit\" (click)=\"delete(restaurant)\"\n                                    class=\"btn btn-danger btn-sm\">\n                                <fa-icon icon=\"times\"></fa-icon>\n                                <span class=\"d-none d-md-inline\" jhiTranslate=\"entity.action.delete\">Delete</span>\n                            </button>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>\n";

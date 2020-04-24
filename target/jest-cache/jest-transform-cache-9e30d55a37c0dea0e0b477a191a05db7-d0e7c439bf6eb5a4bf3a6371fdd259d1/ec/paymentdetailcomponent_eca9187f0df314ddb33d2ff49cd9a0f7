@@ -1,0 +1,42 @@
+0bd8fbdf7d97b12861154de1d0e8ce93
+/* istanbul ignore next */
+var cov_2eu33xcb00 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/payment/payment-detail.component.html";
+  var hash = "8e139e56b7b6c76697fadccd40dfaa0c9a61b505";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/payment/payment-detail.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 1272
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "8e139e56b7b6c76697fadccd40dfaa0c9a61b505"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2eu33xcb00.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <div *ngIf=\"payment\">\n            <h2><span jhiTranslate=\"coopcycleApp.payment.detail.title\">Payment</span> {{ payment.id }}</h2>\n\n            <hr>\n\n            <jhi-alert-error></jhi-alert-error>\n\n            <dl class=\"row-md jh-entity-details\">\n                <dt><span jhiTranslate=\"coopcycleApp.payment.paymentMethod\">Payment Method</span></dt>\n                <dd>\n                    <span jhiTranslate=\"{{ 'coopcycleApp.PaymentMethod.' + payment.paymentMethod }}\">{{ payment.paymentMethod }}</span>\n                </dd>\n            </dl>\n\n            <button type=\"submit\"\n                    (click)=\"previousState()\"\n                    class=\"btn btn-info\">\n                <fa-icon icon=\"arrow-left\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.back\">Back</span>\n            </button>\n\n            <button type=\"button\"\n                    [routerLink]=\"['/payment', payment.id, 'edit']\"\n                    class=\"btn btn-primary\">\n                <fa-icon icon=\"pencil-alt\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.edit\">Edit</span>\n            </button>\n        </div>\n    </div>\n</div>\n";

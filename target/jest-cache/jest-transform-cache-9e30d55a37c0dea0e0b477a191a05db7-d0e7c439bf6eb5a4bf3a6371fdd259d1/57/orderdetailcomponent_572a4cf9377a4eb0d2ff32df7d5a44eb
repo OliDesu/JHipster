@@ -1,0 +1,42 @@
+1e74091c2361fe98c47a7498e7ef8418
+/* istanbul ignore next */
+var cov_22srpha80h = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/order/order-detail.component.html";
+  var hash = "8764b427bf560c02d0275e8ec53e375ccafdc675";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/order/order-detail.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 1161
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "8764b427bf560c02d0275e8ec53e375ccafdc675"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_22srpha80h.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <div *ngIf=\"order\">\n            <h2><span jhiTranslate=\"coopcycleApp.order.detail.title\">Order</span> {{ order.id }}</h2>\n\n            <hr>\n\n            <jhi-alert-error></jhi-alert-error>\n\n            <dl class=\"row-md jh-entity-details\">\n                <dt><span jhiTranslate=\"coopcycleApp.order.orderId\">Order Id</span></dt>\n                <dd>\n                    <span>{{ order.orderId }}</span>\n                </dd>\n            </dl>\n\n            <button type=\"submit\"\n                    (click)=\"previousState()\"\n                    class=\"btn btn-info\">\n                <fa-icon icon=\"arrow-left\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.back\">Back</span>\n            </button>\n\n            <button type=\"button\"\n                    [routerLink]=\"['/order', order.id, 'edit']\"\n                    class=\"btn btn-primary\">\n                <fa-icon icon=\"pencil-alt\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.edit\">Edit</span>\n            </button>\n        </div>\n    </div>\n</div>\n";

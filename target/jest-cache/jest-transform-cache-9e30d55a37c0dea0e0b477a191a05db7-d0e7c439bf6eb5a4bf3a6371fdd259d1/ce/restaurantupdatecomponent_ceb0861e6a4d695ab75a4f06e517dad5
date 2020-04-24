@@ -1,0 +1,42 @@
+0b467b8d15c79a491eabbd28c2cbe38f
+/* istanbul ignore next */
+var cov_2m5na7spl1 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/restaurant/restaurant-update.component.html";
+  var hash = "c24e74c62c3ac52f86679096d567695696318d04";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/restaurant/restaurant-update.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 3713
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "c24e74c62c3ac52f86679096d567695696318d04"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2m5na7spl1.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <form name=\"editForm\" role=\"form\" novalidate (ngSubmit)=\"save()\" [formGroup]=\"editForm\">\n            <h2 id=\"jhi-restaurant-heading\" jhiTranslate=\"coopcycleApp.restaurant.home.createOrEditLabel\">Create or edit a Restaurant</h2>\n\n            <div>\n                <jhi-alert-error></jhi-alert-error>\n\n                <div class=\"form-group\" [hidden]=\"!editForm.get('id')!.value\">\n                    <label for=\"id\" jhiTranslate=\"global.field.id\">ID</label>\n                    <input type=\"text\" class=\"form-control\" id=\"id\" name=\"id\" formControlName=\"id\" readonly />\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.restaurant.restaurantId\" for=\"field_restaurantId\">Restaurant Id</label>\n                    <input type=\"number\" class=\"form-control\" name=\"restaurantId\" id=\"field_restaurantId\"\n                           formControlName=\"restaurantId\"/>\n                    <div *ngIf=\"editForm.get('restaurantId')!.invalid && (editForm.get('restaurantId')!.dirty || editForm.get('restaurantId')!.touched)\">\n                        <small class=\"form-text text-danger\"\n                               *ngIf=\"editForm.get('restaurantId')?.errors?.required\" jhiTranslate=\"entity.validation.required\">\n                        This field is required.\n                        </small>\n                        <small class=\"form-text text-danger\"\n                            [hidden]=\"!editForm.get('restaurantId')?.errors?.number\" jhiTranslate=\"entity.validation.number\">\n                            This field should be a number.\n                        </small>\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.restaurant.name\" for=\"field_name\">Name</label>\n                    <input type=\"text\" class=\"form-control\" name=\"name\" id=\"field_name\"\n                           formControlName=\"name\"/>\n                    <div *ngIf=\"editForm.get('name')!.invalid && (editForm.get('name')!.dirty || editForm.get('name')!.touched)\">\n                        <small class=\"form-text text-danger\"\n                               *ngIf=\"editForm.get('name')?.errors?.required\" jhiTranslate=\"entity.validation.required\">\n                        This field is required.\n                        </small>\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.restaurant.description\" for=\"field_description\">Description</label>\n                    <input type=\"text\" class=\"form-control\" name=\"description\" id=\"field_description\"\n                           formControlName=\"description\"/>\n                </div>\n            </div>\n\n            <div>\n                <button type=\"button\" id=\"cancel-save\" class=\"btn btn-secondary\" (click)=\"previousState()\">\n                    <fa-icon icon=\"ban\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.cancel\">Cancel</span>\n                </button>\n\n                <button type=\"submit\" id=\"save-entity\" [disabled]=\"editForm.invalid || isSaving\" class=\"btn btn-primary\">\n                    <fa-icon icon=\"save\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.save\">Save</span>\n                </button>\n            </div>\n        </form>\n    </div>\n</div>\n";

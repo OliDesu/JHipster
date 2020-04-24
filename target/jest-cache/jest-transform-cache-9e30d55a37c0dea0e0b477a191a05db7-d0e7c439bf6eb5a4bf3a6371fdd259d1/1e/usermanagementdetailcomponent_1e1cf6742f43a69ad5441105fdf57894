@@ -1,0 +1,42 @@
+8a9409114ff10b58913006238ff87650
+/* istanbul ignore next */
+var cov_1co4683kpo = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/user-management/user-management-detail.component.html";
+  var hash = "9b180cacf0486fc5b27994148070111397e7728f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/user-management/user-management-detail.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 2660
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "9b180cacf0486fc5b27994148070111397e7728f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1co4683kpo.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <div *ngIf=\"user\">\n            <h2>\n                <span jhiTranslate=\"userManagement.detail.title\">User</span> [<b>{{ user.login }}</b>]\n            </h2>\n\n            <dl class=\"row-md jh-entity-details\">\n                <dt><span jhiTranslate=\"userManagement.login\">Login</span></dt>\n                <dd>\n                    <span>{{ user.login }}</span>\n                    <jhi-boolean\n                        [value]=\"user.activated\"\n                        [textTrue]=\"'userManagement.activated' | translate\"\n                        [textFalse]=\"'userManagement.deactivated' | translate\">\n                    </jhi-boolean>\n                </dd>\n\n                <dt><span jhiTranslate=\"userManagement.firstName\">First Name</span></dt>\n                <dd>{{ user.firstName }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.lastName\">Last Name</span></dt>\n                <dd>{{ user.lastName }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.email\">Email</span></dt>\n                <dd>{{ user.email }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.langKey\">Lang Key</span></dt>\n                <dd>{{ user.langKey }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.createdBy\">Created By</span></dt>\n                <dd>{{ user.createdBy }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.createdDate\">Created Date</span></dt>\n                <dd>{{ user.createdDate | date:'dd/MM/yy HH:mm' }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.lastModifiedBy\">Last Modified By</span></dt>\n                <dd>{{ user.lastModifiedBy }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.lastModifiedDate\">Last Modified Date</span></dt>\n                <dd>{{ user.lastModifiedDate | date:'dd/MM/yy HH:mm' }}</dd>\n\n                <dt><span jhiTranslate=\"userManagement.profiles\">Profiles</span></dt>\n                <dd>\n                    <ul class=\"list-unstyled\">\n                        <li *ngFor=\"let authority of user.authorities\">\n                            <span class=\"badge badge-info\">{{ authority }}</span>\n                        </li>\n                    </ul>\n                </dd>\n            </dl>\n\n            <button type=\"submit\" routerLink=\"../../\" class=\"btn btn-info\">\n                <fa-icon icon=\"arrow-left\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.back\">Back</span>\n            </button>\n        </div>\n    </div>\n</div>\n";

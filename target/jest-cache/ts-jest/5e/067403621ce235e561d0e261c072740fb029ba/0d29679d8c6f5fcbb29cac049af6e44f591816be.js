@@ -1,0 +1,32 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const core_1 = require("@angular/core");
+const ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+const ng_jhipster_1 = require("ng-jhipster");
+const user_service_1 = require("app/core/user/user.service");
+let UserManagementDeleteDialogComponent = class UserManagementDeleteDialogComponent {
+    constructor(userService, activeModal, eventManager) {
+        this.userService = userService;
+        this.activeModal = activeModal;
+        this.eventManager = eventManager;
+    }
+    cancel() {
+        this.activeModal.dismiss();
+    }
+    confirmDelete(login) {
+        this.userService.delete(login).subscribe(() => {
+            this.eventManager.broadcast('userListModification');
+            this.activeModal.close();
+        });
+    }
+};
+UserManagementDeleteDialogComponent = tslib_1.__decorate([
+    core_1.Component({
+        selector: 'jhi-user-mgmt-delete-dialog',
+        template: require('./user-management-delete-dialog.component.html')
+    }),
+    tslib_1.__metadata("design:paramtypes", [user_service_1.UserService, ng_bootstrap_1.NgbActiveModal, ng_jhipster_1.JhiEventManager])
+], UserManagementDeleteDialogComponent);
+exports.UserManagementDeleteDialogComponent = UserManagementDeleteDialogComponent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2FkbWluL3VzZXItbWFuYWdlbWVudC91c2VyLW1hbmFnZW1lbnQtZGVsZXRlLWRpYWxvZy5jb21wb25lbnQudHMiLCJtYXBwaW5ncyI6Ijs7O0FBQUEsd0NBQTBDO0FBQzFDLDZEQUE0RDtBQUM1RCw2Q0FBOEM7QUFHOUMsNkRBQXlEO0FBTXpELElBQWEsbUNBQW1DLEdBQWhELE1BQWEsbUNBQW1DO0lBRzlDLFlBQW9CLFdBQXdCLEVBQVMsV0FBMkIsRUFBVSxZQUE2QjtRQUFuRyxnQkFBVyxHQUFYLFdBQVcsQ0FBYTtRQUFTLGdCQUFXLEdBQVgsV0FBVyxDQUFnQjtRQUFVLGlCQUFZLEdBQVosWUFBWSxDQUFpQjtJQUFHLENBQUM7SUFFM0gsTUFBTTtRQUNKLElBQUksQ0FBQyxXQUFXLENBQUMsT0FBTyxFQUFFLENBQUM7SUFDN0IsQ0FBQztJQUVELGFBQWEsQ0FBQyxLQUFhO1FBQ3pCLElBQUksQ0FBQyxXQUFXLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxDQUFDLFNBQVMsQ0FBQyxHQUFHLEVBQUU7WUFDNUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsc0JBQXNCLENBQUMsQ0FBQztZQUNwRCxJQUFJLENBQUMsV0FBVyxDQUFDLEtBQUssRUFBRSxDQUFDO1FBQzNCLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQztDQUNGLENBQUE7QUFmWSxtQ0FBbUM7SUFKL0MsZ0JBQVMsQ0FBQztRQUNULFFBQVEsRUFBRSw2QkFBNkI7UUFDdkMsa0JBQWEsZ0RBQWdELENBQUE7S0FDOUQsQ0FBQzs2Q0FJaUMsMEJBQVcsRUFBc0IsNkJBQWMsRUFBd0IsNkJBQWU7R0FINUcsbUNBQW1DLENBZS9DO0FBZlksa0ZBQW1DIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbIi9ob21lL2FsaS9leGVtcGxlLWpoaXBzdGVyL3Rlc3RiZWQvc3JjL21haW4vd2ViYXBwL2FwcC9hZG1pbi91c2VyLW1hbmFnZW1lbnQvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgTmdiQWN0aXZlTW9kYWwgfSBmcm9tICdAbmctYm9vdHN0cmFwL25nLWJvb3RzdHJhcCc7XG5pbXBvcnQgeyBKaGlFdmVudE1hbmFnZXIgfSBmcm9tICduZy1qaGlwc3Rlcic7XG5cbmltcG9ydCB7IFVzZXIgfSBmcm9tICdhcHAvY29yZS91c2VyL3VzZXIubW9kZWwnO1xuaW1wb3J0IHsgVXNlclNlcnZpY2UgfSBmcm9tICdhcHAvY29yZS91c2VyL3VzZXIuc2VydmljZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2poaS11c2VyLW1nbXQtZGVsZXRlLWRpYWxvZycsXG4gIHRlbXBsYXRlVXJsOiAnLi91c2VyLW1hbmFnZW1lbnQtZGVsZXRlLWRpYWxvZy5jb21wb25lbnQuaHRtbCdcbn0pXG5leHBvcnQgY2xhc3MgVXNlck1hbmFnZW1lbnREZWxldGVEaWFsb2dDb21wb25lbnQge1xuICB1c2VyPzogVXNlcjtcblxuICBjb25zdHJ1Y3Rvcihwcml2YXRlIHVzZXJTZXJ2aWNlOiBVc2VyU2VydmljZSwgcHVibGljIGFjdGl2ZU1vZGFsOiBOZ2JBY3RpdmVNb2RhbCwgcHJpdmF0ZSBldmVudE1hbmFnZXI6IEpoaUV2ZW50TWFuYWdlcikge31cblxuICBjYW5jZWwoKTogdm9pZCB7XG4gICAgdGhpcy5hY3RpdmVNb2RhbC5kaXNtaXNzKCk7XG4gIH1cblxuICBjb25maXJtRGVsZXRlKGxvZ2luOiBzdHJpbmcpOiB2b2lkIHtcbiAgICB0aGlzLnVzZXJTZXJ2aWNlLmRlbGV0ZShsb2dpbikuc3Vic2NyaWJlKCgpID0+IHtcbiAgICAgIHRoaXMuZXZlbnRNYW5hZ2VyLmJyb2FkY2FzdCgndXNlckxpc3RNb2RpZmljYXRpb24nKTtcbiAgICAgIHRoaXMuYWN0aXZlTW9kYWwuY2xvc2UoKTtcbiAgICB9KTtcbiAgfVxufVxuIl0sInZlcnNpb24iOjN9

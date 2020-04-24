@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="/home/ali/exemple-jhipster/testbed/pom.xml">
+</file>
+<file name="/home/ali/exemple-jhipster/testbed/README.md">
+</file>
+<file name="/home/ali/exemple-jhipster/testbed/src/main/resources/i18n/messages.properties">
+</file>
+<file name="/home/ali/exemple-jhipster/testbed/src/main/resources/i18n/messages_fr.properties">
+</file>
+<file name="/home/ali/exemple-jhipster/testbed/src/main/resources/i18n/messages_en.properties">
+</file>
+<file name="/home/ali/exemple-jhipster/testbed/src/main/resources/.h2.server.properties">
+</file>
+<file name="/home/ali/exemple-jhipster/testbed/src/test/resources/i18n/messages_fr.properties">
+</file>
+<file name="/home/ali/exemple-jhipster/testbed/src/test/resources/i18n/messages_en.properties">
+</file>
+</checkstyle>

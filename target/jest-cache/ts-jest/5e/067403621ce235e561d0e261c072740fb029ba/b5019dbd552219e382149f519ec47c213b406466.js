@@ -1,0 +1,50 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const testing_1 = require("@angular/core/testing");
+const rxjs_1 = require("rxjs");
+const test_module_1 = require("../../../test.module");
+const metrics_component_1 = require("app/admin/metrics/metrics.component");
+const metrics_service_1 = require("app/admin/metrics/metrics.service");
+describe('Component Tests', () => {
+    describe('MetricsComponent', () => {
+        let comp;
+        let fixture;
+        let service;
+        beforeEach(testing_1.async(() => {
+            testing_1.TestBed.configureTestingModule({
+                imports: [test_module_1.CoopcycleTestModule],
+                declarations: [metrics_component_1.MetricsComponent]
+            })
+                .overrideTemplate(metrics_component_1.MetricsComponent, '')
+                .compileComponents();
+        }));
+        beforeEach(() => {
+            fixture = testing_1.TestBed.createComponent(metrics_component_1.MetricsComponent);
+            comp = fixture.componentInstance;
+            service = fixture.debugElement.injector.get(metrics_service_1.MetricsService);
+        });
+        describe('refresh', () => {
+            it('should call refresh on init', () => {
+                // GIVEN
+                const response = {
+                    timers: {
+                        service: 'test',
+                        unrelatedKey: 'test'
+                    },
+                    gauges: {
+                        'jcache.statistics': {
+                            value: 2
+                        },
+                        unrelatedKey: 'test'
+                    }
+                };
+                spyOn(service, 'getMetrics').and.returnValue(rxjs_1.of(response));
+                // WHEN
+                comp.ngOnInit();
+                // THEN
+                expect(service.getMetrics).toHaveBeenCalled();
+            });
+        });
+    });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvdGVzdC9qYXZhc2NyaXB0L3NwZWMvYXBwL2FkbWluL21ldHJpY3MvbWV0cmljcy5jb21wb25lbnQuc3BlYy50cyIsIm1hcHBpbmdzIjoiOztBQUFBLG1EQUF5RTtBQUN6RSwrQkFBMEI7QUFFMUIsc0RBQTJEO0FBQzNELDJFQUF1RTtBQUN2RSx1RUFBbUU7QUFFbkUsUUFBUSxDQUFDLGlCQUFpQixFQUFFLEdBQUcsRUFBRTtJQUMvQixRQUFRLENBQUMsa0JBQWtCLEVBQUUsR0FBRyxFQUFFO1FBQ2hDLElBQUksSUFBc0IsQ0FBQztRQUMzQixJQUFJLE9BQTJDLENBQUM7UUFDaEQsSUFBSSxPQUF1QixDQUFDO1FBRTVCLFVBQVUsQ0FBQyxlQUFLLENBQUMsR0FBRyxFQUFFO1lBQ3BCLGlCQUFPLENBQUMsc0JBQXNCLENBQUM7Z0JBQzdCLE9BQU8sRUFBRSxDQUFDLGlDQUFtQixDQUFDO2dCQUM5QixZQUFZLEVBQUUsQ0FBQyxvQ0FBZ0IsQ0FBQzthQUNqQyxDQUFDO2lCQUNDLGdCQUFnQixDQUFDLG9DQUFnQixFQUFFLEVBQUUsQ0FBQztpQkFDdEMsaUJBQWlCLEVBQUUsQ0FBQztRQUN6QixDQUFDLENBQUMsQ0FBQyxDQUFDO1FBRUosVUFBVSxDQUFDLEdBQUcsRUFBRTtZQUNkLE9BQU8sR0FBRyxpQkFBTyxDQUFDLGVBQWUsQ0FBQyxvQ0FBZ0IsQ0FBQyxDQUFDO1lBQ3BELElBQUksR0FBRyxPQUFPLENBQUMsaUJBQWlCLENBQUM7WUFDakMsT0FBTyxHQUFHLE9BQU8sQ0FBQyxZQUFZLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQyxnQ0FBYyxDQUFDLENBQUM7UUFDOUQsQ0FBQyxDQUFDLENBQUM7UUFFSCxRQUFRLENBQUMsU0FBUyxFQUFFLEdBQUcsRUFBRTtZQUN2QixFQUFFLENBQUMsNkJBQTZCLEVBQUUsR0FBRyxFQUFFO2dCQUNyQyxRQUFRO2dCQUNSLE1BQU0sUUFBUSxHQUFHO29CQUNmLE1BQU0sRUFBRTt3QkFDTixPQUFPLEVBQUUsTUFBTTt3QkFDZixZQUFZLEVBQUUsTUFBTTtxQkFDckI7b0JBQ0QsTUFBTSxFQUFFO3dCQUNOLG1CQUFtQixFQUFFOzRCQUNuQixLQUFLLEVBQUUsQ0FBQzt5QkFDVDt3QkFDRCxZQUFZLEVBQUUsTUFBTTtxQkFDckI7aUJBQ0YsQ0FBQztnQkFDRixLQUFLLENBQUMsT0FBTyxFQUFFLFlBQVksQ0FBQyxDQUFDLEdBQUcsQ0FBQyxXQUFXLENBQUMsU0FBRSxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUM7Z0JBRTNELE9BQU87Z0JBQ1AsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO2dCQUVoQixPQUFPO2dCQUNQLE1BQU0sQ0FBQyxPQUFPLENBQUMsVUFBVSxDQUFDLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQztZQUNoRCxDQUFDLENBQUMsQ0FBQztRQUNMLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDLENBQUMsQ0FBQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvaG9tZS9hbGkvZXhlbXBsZS1qaGlwc3Rlci90ZXN0YmVkL3NyYy90ZXN0L2phdmFzY3JpcHQvc3BlYy9hcHAvYWRtaW4vbWV0cmljcy9tZXRyaWNzLmNvbXBvbmVudC5zcGVjLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudEZpeHR1cmUsIFRlc3RCZWQsIGFzeW5jIH0gZnJvbSAnQGFuZ3VsYXIvY29yZS90ZXN0aW5nJztcbmltcG9ydCB7IG9mIH0gZnJvbSAncnhqcyc7XG5cbmltcG9ydCB7IENvb3BjeWNsZVRlc3RNb2R1bGUgfSBmcm9tICcuLi8uLi8uLi90ZXN0Lm1vZHVsZSc7XG5pbXBvcnQgeyBNZXRyaWNzQ29tcG9uZW50IH0gZnJvbSAnYXBwL2FkbWluL21ldHJpY3MvbWV0cmljcy5jb21wb25lbnQnO1xuaW1wb3J0IHsgTWV0cmljc1NlcnZpY2UgfSBmcm9tICdhcHAvYWRtaW4vbWV0cmljcy9tZXRyaWNzLnNlcnZpY2UnO1xuXG5kZXNjcmliZSgnQ29tcG9uZW50IFRlc3RzJywgKCkgPT4ge1xuICBkZXNjcmliZSgnTWV0cmljc0NvbXBvbmVudCcsICgpID0+IHtcbiAgICBsZXQgY29tcDogTWV0cmljc0NvbXBvbmVudDtcbiAgICBsZXQgZml4dHVyZTogQ29tcG9uZW50Rml4dHVyZTxNZXRyaWNzQ29tcG9uZW50PjtcbiAgICBsZXQgc2VydmljZTogTWV0cmljc1NlcnZpY2U7XG5cbiAgICBiZWZvcmVFYWNoKGFzeW5jKCgpID0+IHtcbiAgICAgIFRlc3RCZWQuY29uZmlndXJlVGVzdGluZ01vZHVsZSh7XG4gICAgICAgIGltcG9ydHM6IFtDb29wY3ljbGVUZXN0TW9kdWxlXSxcbiAgICAgICAgZGVjbGFyYXRpb25zOiBbTWV0cmljc0NvbXBvbmVudF1cbiAgICAgIH0pXG4gICAgICAgIC5vdmVycmlkZVRlbXBsYXRlKE1ldHJpY3NDb21wb25lbnQsICcnKVxuICAgICAgICAuY29tcGlsZUNvbXBvbmVudHMoKTtcbiAgICB9KSk7XG5cbiAgICBiZWZvcmVFYWNoKCgpID0+IHtcbiAgICAgIGZpeHR1cmUgPSBUZXN0QmVkLmNyZWF0ZUNvbXBvbmVudChNZXRyaWNzQ29tcG9uZW50KTtcbiAgICAgIGNvbXAgPSBmaXh0dXJlLmNvbXBvbmVudEluc3RhbmNlO1xuICAgICAgc2VydmljZSA9IGZpeHR1cmUuZGVidWdFbGVtZW50LmluamVjdG9yLmdldChNZXRyaWNzU2VydmljZSk7XG4gICAgfSk7XG5cbiAgICBkZXNjcmliZSgncmVmcmVzaCcsICgpID0+IHtcbiAgICAgIGl0KCdzaG91bGQgY2FsbCByZWZyZXNoIG9uIGluaXQnLCAoKSA9PiB7XG4gICAgICAgIC8vIEdJVkVOXG4gICAgICAgIGNvbnN0IHJlc3BvbnNlID0ge1xuICAgICAgICAgIHRpbWVyczoge1xuICAgICAgICAgICAgc2VydmljZTogJ3Rlc3QnLFxuICAgICAgICAgICAgdW5yZWxhdGVkS2V5OiAndGVzdCdcbiAgICAgICAgICB9LFxuICAgICAgICAgIGdhdWdlczoge1xuICAgICAgICAgICAgJ2pjYWNoZS5zdGF0aXN0aWNzJzoge1xuICAgICAgICAgICAgICB2YWx1ZTogMlxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHVucmVsYXRlZEtleTogJ3Rlc3QnXG4gICAgICAgICAgfVxuICAgICAgICB9O1xuICAgICAgICBzcHlPbihzZXJ2aWNlLCAnZ2V0TWV0cmljcycpLmFuZC5yZXR1cm5WYWx1ZShvZihyZXNwb25zZSkpO1xuXG4gICAgICAgIC8vIFdIRU5cbiAgICAgICAgY29tcC5uZ09uSW5pdCgpO1xuXG4gICAgICAgIC8vIFRIRU5cbiAgICAgICAgZXhwZWN0KHNlcnZpY2UuZ2V0TWV0cmljcykudG9IYXZlQmVlbkNhbGxlZCgpO1xuICAgICAgfSk7XG4gICAgfSk7XG4gIH0pO1xufSk7XG4iXSwidmVyc2lvbiI6M30=

@@ -1,0 +1,42 @@
+797bd3e261894033847660a5f1335f25
+/* istanbul ignore next */
+var cov_20eibgv9o1 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/basket/basket-detail.component.html";
+  var hash = "e90b2d1159c1b42a696345d2ee0956c6456c347b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/basket/basket-detail.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 2135
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "e90b2d1159c1b42a696345d2ee0956c6456c347b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_20eibgv9o1.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <div *ngIf=\"basket\">\n            <h2><span jhiTranslate=\"coopcycleApp.basket.detail.title\">Basket</span> {{ basket.id }}</h2>\n\n            <hr>\n\n            <jhi-alert-error></jhi-alert-error>\n\n            <dl class=\"row-md jh-entity-details\">\n                <dt><span jhiTranslate=\"coopcycleApp.basket.basketId\">Basket Id</span></dt>\n                <dd>\n                    <span>{{ basket.basketId }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.basket.basketState\">Basket State</span></dt>\n                <dd>\n                    <span jhiTranslate=\"{{ 'coopcycleApp.BasketState.' + basket.basketState }}\">{{ basket.basketState }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.basket.user\">User</span></dt>\n                <dd>\n                    {{ basket.user?.id }}\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.basket.course\">Course</span></dt>\n                <dd>\n                    <div *ngIf=\"basket.course\">\n                        <a [routerLink]=\"['/course', basket.course?.id, 'view']\">{{ basket.course?.id }}</a>\n                    </div>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.basket.customer\">Customer</span></dt>\n                <dd>\n                    {{ basket.customer?.id }}\n                </dd>\n            </dl>\n\n            <button type=\"submit\"\n                    (click)=\"previousState()\"\n                    class=\"btn btn-info\">\n                <fa-icon icon=\"arrow-left\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.back\">Back</span>\n            </button>\n\n            <button type=\"button\"\n                    [routerLink]=\"['/basket', basket.id, 'edit']\"\n                    class=\"btn btn-primary\">\n                <fa-icon icon=\"pencil-alt\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.edit\">Edit</span>\n            </button>\n        </div>\n    </div>\n</div>\n";

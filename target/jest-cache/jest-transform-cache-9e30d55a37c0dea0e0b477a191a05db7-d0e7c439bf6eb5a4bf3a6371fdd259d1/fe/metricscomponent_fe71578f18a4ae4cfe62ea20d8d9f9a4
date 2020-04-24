@@ -1,0 +1,42 @@
+4f489209de5e505cd66e1286cc4f58b3
+/* istanbul ignore next */
+var cov_2ci2ynjjq5 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/metrics/metrics.component.html";
+  var hash = "b37e53c692c5d9fb8b72e672e9391948a8ffa83c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/metrics/metrics.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 2363
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "b37e53c692c5d9fb8b72e672e9391948a8ffa83c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2ci2ynjjq5.s[0]++;
+module.exports = "<div>\n    <h2>\n        <span id=\"metrics-page-heading\" jhiTranslate=\"metrics.title\">Application Metrics</span>\n\n        <button class=\"btn btn-primary float-right\" (click)=\"refresh()\">\n            <fa-icon icon=\"sync\"></fa-icon> <span jhiTranslate=\"metrics.refresh.button\">Refresh</span>\n        </button>\n    </h2>\n\n    <h3 jhiTranslate=\"metrics.jvm.title\">JVM Metrics</h3>\n\n    <div class=\"row\" *ngIf=\"metrics && !updatingMetrics\">\n        <jhi-jvm-memory\n            class=\"col-md-4\"\n            [updating]=\"updatingMetrics\"\n            [jvmMemoryMetrics]=\"metrics.jvm\">\n        </jhi-jvm-memory>\n\n        <jhi-jvm-threads\n            class=\"col-md-4\"\n            [threadData]=\"threads\">\n        </jhi-jvm-threads>\n\n        <jhi-metrics-system\n            class=\"col-md-4\"\n            [updating]=\"updatingMetrics\"\n            [systemMetrics]=\"metrics.processMetrics\">\n        </jhi-metrics-system>\n    </div>\n\n    <div *ngIf=\"metrics && metricsKeyExists('garbageCollector')\">\n        <h3 jhiTranslate=\"metrics.jvm.gc.title\">Garbage collector statistics</h3>\n\n        <jhi-metrics-garbagecollector\n            [updating]=\"updatingMetrics\"\n            [garbageCollectorMetrics]=\"metrics.garbageCollector\">\n        </jhi-metrics-garbagecollector>\n    </div>\n\n    <div class=\"well well-lg\" *ngIf=\"updatingMetrics\" jhiTranslate=\"metrics.updating\">Updating...</div>\n\n    <jhi-metrics-request\n        *ngIf=\"metrics && metricsKeyExists('http.server.requests')\"\n        [updating]=\"updatingMetrics\"\n        [requestMetrics]=\"metrics['http.server.requests']\">\n    </jhi-metrics-request>\n\n    <jhi-metrics-endpoints-requests\n        *ngIf=\"metrics && metricsKeyExists('services')\"\n        [updating]=\"updatingMetrics\"\n        [endpointsRequestsMetrics]=\"metrics.services\">\n    </jhi-metrics-endpoints-requests>\n\n    <jhi-metrics-cache\n        *ngIf=\"metrics && metricsKeyExists('cache')\"\n        [updating]=\"updatingMetrics\"\n        [cacheMetrics]=\"metrics.cache\">\n    </jhi-metrics-cache>\n\n    <jhi-metrics-datasource\n        *ngIf=\"metrics && metricsKeyExistsAndObjectNotEmpty('databases')\"\n        [updating]=\"updatingMetrics\"\n        [datasourceMetrics]=\"metrics.databases\">\n    </jhi-metrics-datasource>\n</div>\n";

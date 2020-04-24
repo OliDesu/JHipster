@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CourseResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coopcycle</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.myapp.web.rest</a> &gt; <span class="el_source">CourseResource.java</span></div><h1>CourseResource.java</h1><pre class="source lang-java linenums">package com.mycompany.myapp.web.rest;
+
+import com.mycompany.myapp.domain.Course;
+import com.mycompany.myapp.repository.CourseRepository;
+import com.mycompany.myapp.web.rest.errors.BadRequestAlertException;
+
+import io.github.jhipster.web.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+/**
+ * REST controller for managing {@link com.mycompany.myapp.domain.Course}.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+@Transactional
+public class CourseResource {
+
+<span class="fc" id="L32">    private final Logger log = LoggerFactory.getLogger(CourseResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;course&quot;;
+
+    @Value(&quot;${jhipster.clientApp.name}&quot;)
+    private String applicationName;
+
+    private final CourseRepository courseRepository;
+
+<span class="fc" id="L41">    public CourseResource(CourseRepository courseRepository) {</span>
+<span class="fc" id="L42">        this.courseRepository = courseRepository;</span>
+<span class="fc" id="L43">    }</span>
+
+    /**
+     * {@code POST  /courses} : Create a new course.
+     *
+     * @param course the course to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new course, or with status {@code 400 (Bad Request)} if the course has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping(&quot;/courses&quot;)
+    public ResponseEntity&lt;Course&gt; createCourse(@Valid @RequestBody Course course) throws URISyntaxException {
+<span class="fc" id="L54">        log.debug(&quot;REST request to save Course : {}&quot;, course);</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (course.getId() != null) {</span>
+<span class="fc" id="L56">            throw new BadRequestAlertException(&quot;A new course cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L58">        Course result = courseRepository.save(course);</span>
+<span class="fc" id="L59">        return ResponseEntity.created(new URI(&quot;/api/courses/&quot; + result.getId()))</span>
+<span class="fc" id="L60">            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L61">            .body(result);</span>
+    }
+
+    /**
+     * {@code PUT  /courses} : Updates an existing course.
+     *
+     * @param course the course to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated course,
+     * or with status {@code 400 (Bad Request)} if the course is not valid,
+     * or with status {@code 500 (Internal Server Error)} if the course couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PutMapping(&quot;/courses&quot;)
+    public ResponseEntity&lt;Course&gt; updateCourse(@Valid @RequestBody Course course) throws URISyntaxException {
+<span class="fc" id="L75">        log.debug(&quot;REST request to update Course : {}&quot;, course);</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if (course.getId() == null) {</span>
+<span class="fc" id="L77">            throw new BadRequestAlertException(&quot;Invalid id&quot;, ENTITY_NAME, &quot;idnull&quot;);</span>
+        }
+<span class="fc" id="L79">        Course result = courseRepository.save(course);</span>
+<span class="fc" id="L80">        return ResponseEntity.ok()</span>
+<span class="fc" id="L81">            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, course.getId().toString()))</span>
+<span class="fc" id="L82">            .body(result);</span>
+    }
+
+    /**
+     * {@code GET  /courses} : get all the courses.
+     *
+     * @param filter the filter of the request.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of courses in body.
+     */
+    @GetMapping(&quot;/courses&quot;)
+    public List&lt;Course&gt; getAllCourses(@RequestParam(required = false) String filter) {
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">        if (&quot;basket-is-null&quot;.equals(filter)) {</span>
+<span class="nc" id="L94">            log.debug(&quot;REST request to get all Courses where basket is null&quot;);</span>
+<span class="nc" id="L95">            return StreamSupport</span>
+<span class="nc" id="L96">                .stream(courseRepository.findAll().spliterator(), false)</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">                .filter(course -&gt; course.getBasket() == null)</span>
+<span class="nc" id="L98">                .collect(Collectors.toList());</span>
+        }
+<span class="fc" id="L100">        log.debug(&quot;REST request to get all Courses&quot;);</span>
+<span class="fc" id="L101">        return courseRepository.findAll();</span>
+    }
+
+    /**
+     * {@code GET  /courses/:id} : get the &quot;id&quot; course.
+     *
+     * @param id the id of the course to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the course, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping(&quot;/courses/{id}&quot;)
+    public ResponseEntity&lt;Course&gt; getCourse(@PathVariable Long id) {
+<span class="fc" id="L112">        log.debug(&quot;REST request to get Course : {}&quot;, id);</span>
+<span class="fc" id="L113">        Optional&lt;Course&gt; course = courseRepository.findById(id);</span>
+<span class="fc" id="L114">        return ResponseUtil.wrapOrNotFound(course);</span>
+    }
+
+    /**
+     * {@code DELETE  /courses/:id} : delete the &quot;id&quot; course.
+     *
+     * @param id the id of the course to delete.
+     * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
+     */
+    @DeleteMapping(&quot;/courses/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deleteCourse(@PathVariable Long id) {
+<span class="fc" id="L125">        log.debug(&quot;REST request to delete Course : {}&quot;, id);</span>
+<span class="fc" id="L126">        courseRepository.deleteById(id);</span>
+<span class="fc" id="L127">        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

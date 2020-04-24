@@ -1,0 +1,47 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const core_1 = require("@angular/core");
+const ng_jhipster_1 = require("ng-jhipster");
+const ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+const payment_service_1 = require("./payment.service");
+const payment_delete_dialog_component_1 = require("./payment-delete-dialog.component");
+let PaymentComponent = class PaymentComponent {
+    constructor(paymentService, eventManager, modalService) {
+        this.paymentService = paymentService;
+        this.eventManager = eventManager;
+        this.modalService = modalService;
+    }
+    loadAll() {
+        this.paymentService.query().subscribe((res) => (this.payments = res.body || []));
+    }
+    ngOnInit() {
+        this.loadAll();
+        this.registerChangeInPayments();
+    }
+    ngOnDestroy() {
+        if (this.eventSubscriber) {
+            this.eventManager.destroy(this.eventSubscriber);
+        }
+    }
+    trackId(index, item) {
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+        return item.id;
+    }
+    registerChangeInPayments() {
+        this.eventSubscriber = this.eventManager.subscribe('paymentListModification', () => this.loadAll());
+    }
+    delete(payment) {
+        const modalRef = this.modalService.open(payment_delete_dialog_component_1.PaymentDeleteDialogComponent, { size: 'lg', backdrop: 'static' });
+        modalRef.componentInstance.payment = payment;
+    }
+};
+PaymentComponent = tslib_1.__decorate([
+    core_1.Component({
+        selector: 'jhi-payment',
+        template: require('./payment.component.html')
+    }),
+    tslib_1.__metadata("design:paramtypes", [payment_service_1.PaymentService, ng_jhipster_1.JhiEventManager, ng_bootstrap_1.NgbModal])
+], PaymentComponent);
+exports.PaymentComponent = PaymentComponent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2VudGl0aWVzL3BheW1lbnQvcGF5bWVudC5jb21wb25lbnQudHMiLCJtYXBwaW5ncyI6Ijs7O0FBQUEsd0NBQTZEO0FBRzdELDZDQUE4QztBQUM5Qyw2REFBc0Q7QUFHdEQsdURBQW1EO0FBQ25ELHVGQUFpRjtBQU1qRixJQUFhLGdCQUFnQixHQUE3QixNQUFhLGdCQUFnQjtJQUkzQixZQUFzQixjQUE4QixFQUFZLFlBQTZCLEVBQVksWUFBc0I7UUFBekcsbUJBQWMsR0FBZCxjQUFjLENBQWdCO1FBQVksaUJBQVksR0FBWixZQUFZLENBQWlCO1FBQVksaUJBQVksR0FBWixZQUFZLENBQVU7SUFBRyxDQUFDO0lBRW5JLE9BQU87UUFDTCxJQUFJLENBQUMsY0FBYyxDQUFDLEtBQUssRUFBRSxDQUFDLFNBQVMsQ0FBQyxDQUFDLEdBQTZCLEVBQUUsRUFBRSxDQUFDLENBQUMsSUFBSSxDQUFDLFFBQVEsR0FBRyxHQUFHLENBQUMsSUFBSSxJQUFJLEVBQUUsQ0FBQyxDQUFDLENBQUM7SUFDN0csQ0FBQztJQUVELFFBQVE7UUFDTixJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7UUFDZixJQUFJLENBQUMsd0JBQXdCLEVBQUUsQ0FBQztJQUNsQyxDQUFDO0lBRUQsV0FBVztRQUNULElBQUksSUFBSSxDQUFDLGVBQWUsRUFBRTtZQUN4QixJQUFJLENBQUMsWUFBWSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUM7U0FDakQ7SUFDSCxDQUFDO0lBRUQsT0FBTyxDQUFDLEtBQWEsRUFBRSxJQUFjO1FBQ25DLDRFQUE0RTtRQUM1RSxPQUFPLElBQUksQ0FBQyxFQUFHLENBQUM7SUFDbEIsQ0FBQztJQUVELHdCQUF3QjtRQUN0QixJQUFJLENBQUMsZUFBZSxHQUFHLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLHlCQUF5QixFQUFFLEdBQUcsRUFBRSxDQUFDLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQyxDQUFDO0lBQ3RHLENBQUM7SUFFRCxNQUFNLENBQUMsT0FBaUI7UUFDdEIsTUFBTSxRQUFRLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsOERBQTRCLEVBQUUsRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFLFFBQVEsRUFBRSxRQUFRLEVBQUUsQ0FBQyxDQUFDO1FBQzFHLFFBQVEsQ0FBQyxpQkFBaUIsQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDO0lBQy9DLENBQUM7Q0FDRixDQUFBO0FBbENZLGdCQUFnQjtJQUo1QixnQkFBUyxDQUFDO1FBQ1QsUUFBUSxFQUFFLGFBQWE7UUFDdkIsa0JBQWEsMEJBQTBCLENBQUE7S0FDeEMsQ0FBQzs2Q0FLc0MsZ0NBQWMsRUFBMEIsNkJBQWUsRUFBMEIsdUJBQVE7R0FKcEgsZ0JBQWdCLENBa0M1QjtBQWxDWSw0Q0FBZ0IiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2VudGl0aWVzL3BheW1lbnQvcGF5bWVudC5jb21wb25lbnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBPbkluaXQsIE9uRGVzdHJveSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgSHR0cFJlc3BvbnNlIH0gZnJvbSAnQGFuZ3VsYXIvY29tbW9uL2h0dHAnO1xuaW1wb3J0IHsgU3Vic2NyaXB0aW9uIH0gZnJvbSAncnhqcyc7XG5pbXBvcnQgeyBKaGlFdmVudE1hbmFnZXIgfSBmcm9tICduZy1qaGlwc3Rlcic7XG5pbXBvcnQgeyBOZ2JNb2RhbCB9IGZyb20gJ0BuZy1ib290c3RyYXAvbmctYm9vdHN0cmFwJztcblxuaW1wb3J0IHsgSVBheW1lbnQgfSBmcm9tICdhcHAvc2hhcmVkL21vZGVsL3BheW1lbnQubW9kZWwnO1xuaW1wb3J0IHsgUGF5bWVudFNlcnZpY2UgfSBmcm9tICcuL3BheW1lbnQuc2VydmljZSc7XG5pbXBvcnQgeyBQYXltZW50RGVsZXRlRGlhbG9nQ29tcG9uZW50IH0gZnJvbSAnLi9wYXltZW50LWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50JztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnamhpLXBheW1lbnQnLFxuICB0ZW1wbGF0ZVVybDogJy4vcGF5bWVudC5jb21wb25lbnQuaHRtbCdcbn0pXG5leHBvcnQgY2xhc3MgUGF5bWVudENvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCwgT25EZXN0cm95IHtcbiAgcGF5bWVudHM/OiBJUGF5bWVudFtdO1xuICBldmVudFN1YnNjcmliZXI/OiBTdWJzY3JpcHRpb247XG5cbiAgY29uc3RydWN0b3IocHJvdGVjdGVkIHBheW1lbnRTZXJ2aWNlOiBQYXltZW50U2VydmljZSwgcHJvdGVjdGVkIGV2ZW50TWFuYWdlcjogSmhpRXZlbnRNYW5hZ2VyLCBwcm90ZWN0ZWQgbW9kYWxTZXJ2aWNlOiBOZ2JNb2RhbCkge31cblxuICBsb2FkQWxsKCk6IHZvaWQge1xuICAgIHRoaXMucGF5bWVudFNlcnZpY2UucXVlcnkoKS5zdWJzY3JpYmUoKHJlczogSHR0cFJlc3BvbnNlPElQYXltZW50W10+KSA9PiAodGhpcy5wYXltZW50cyA9IHJlcy5ib2R5IHx8IFtdKSk7XG4gIH1cblxuICBuZ09uSW5pdCgpOiB2b2lkIHtcbiAgICB0aGlzLmxvYWRBbGwoKTtcbiAgICB0aGlzLnJlZ2lzdGVyQ2hhbmdlSW5QYXltZW50cygpO1xuICB9XG5cbiAgbmdPbkRlc3Ryb3koKTogdm9pZCB7XG4gICAgaWYgKHRoaXMuZXZlbnRTdWJzY3JpYmVyKSB7XG4gICAgICB0aGlzLmV2ZW50TWFuYWdlci5kZXN0cm95KHRoaXMuZXZlbnRTdWJzY3JpYmVyKTtcbiAgICB9XG4gIH1cblxuICB0cmFja0lkKGluZGV4OiBudW1iZXIsIGl0ZW06IElQYXltZW50KTogbnVtYmVyIHtcbiAgICAvLyBlc2xpbnQtZGlzYWJsZS1uZXh0LWxpbmUgQHR5cGVzY3JpcHQtZXNsaW50L25vLXVubmVjZXNzYXJ5LXR5cGUtYXNzZXJ0aW9uXG4gICAgcmV0dXJuIGl0ZW0uaWQhO1xuICB9XG5cbiAgcmVnaXN0ZXJDaGFuZ2VJblBheW1lbnRzKCk6IHZvaWQge1xuICAgIHRoaXMuZXZlbnRTdWJzY3JpYmVyID0gdGhpcy5ldmVudE1hbmFnZXIuc3Vic2NyaWJlKCdwYXltZW50TGlzdE1vZGlmaWNhdGlvbicsICgpID0+IHRoaXMubG9hZEFsbCgpKTtcbiAgfVxuXG4gIGRlbGV0ZShwYXltZW50OiBJUGF5bWVudCk6IHZvaWQge1xuICAgIGNvbnN0IG1vZGFsUmVmID0gdGhpcy5tb2RhbFNlcnZpY2Uub3BlbihQYXltZW50RGVsZXRlRGlhbG9nQ29tcG9uZW50LCB7IHNpemU6ICdsZycsIGJhY2tkcm9wOiAnc3RhdGljJyB9KTtcbiAgICBtb2RhbFJlZi5jb21wb25lbnRJbnN0YW5jZS5wYXltZW50ID0gcGF5bWVudDtcbiAgfVxufVxuIl0sInZlcnNpb24iOjN9

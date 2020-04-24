@@ -1,0 +1,42 @@
+a1f606451eb20c0d2227a6ea4d890270
+/* istanbul ignore next */
+var cov_1zrdbvxazn = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/product/product.component.html";
+  var hash = "436bf2743385ffa421feb4411e0e0f174eb0e085";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/product/product.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 4203
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "436bf2743385ffa421feb4411e0e0f174eb0e085"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1zrdbvxazn.s[0]++;
+module.exports = "<div>\n    <h2 id=\"page-heading\">\n        <span jhiTranslate=\"coopcycleApp.product.home.title\">Products</span>\n\n        <button id=\"jh-create-entity\" class=\"btn btn-primary float-right jh-create-entity create-product\" [routerLink]=\"['/product/new']\">\n            <fa-icon icon=\"plus\"></fa-icon>\n            <span  jhiTranslate=\"coopcycleApp.product.home.createLabel\">\n            Create a new Product\n            </span>\n        </button>\n    </h2>\n\n    <jhi-alert-error></jhi-alert-error>\n\n    <jhi-alert></jhi-alert>\n\n    <div class=\"alert alert-warning\" id=\"no-result\" *ngIf=\"products?.length === 0\">\n        <span jhiTranslate=\"coopcycleApp.product.home.notFound\">No products found</span>\n    </div>\n\n    <div class=\"table-responsive\" id=\"entities\" *ngIf=\"products?.length > 0\">\n        <table class=\"table table-striped\" aria-describedby=\"page-heading\">\n            <thead>\n                <tr>\n                    <th scope=\"col\" ><span jhiTranslate=\"global.field.id\">ID</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.product.price\">Price</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.product.disponibility\">Disponibility</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.product.description\">Description</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.product.basket\">Basket</span></th>\n                    <th scope=\"col\" ><span jhiTranslate=\"coopcycleApp.product.restaurant\">Restaurant</span></th>\n                    <th scope=\"col\"></th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let product of products ;trackBy: trackId\">\n                    <td><a [routerLink]=\"['/product', product.id, 'view']\">{{ product.id }}</a></td>\n                    <td>{{ product.price }}</td>\n                    <td jhiTranslate=\"{{ 'coopcycleApp.Disponibility.' + product.disponibility }}\">{{ product.disponibility }}</td>\n                    <td>{{ product.description }}</td>\n                    <td>\n                        <div *ngIf=\"product.basket\">\n                            <a [routerLink]=\"['/basket', product.basket?.id, 'view']\" >{{ product.basket?.id }}</a>\n                        </div>\n                    </td>\n                    <td>\n                        <div *ngIf=\"product.restaurant\">\n                            <a [routerLink]=\"['/restaurant', product.restaurant?.id, 'view']\" >{{ product.restaurant?.id }}</a>\n                        </div>\n                    </td>\n                    <td class=\"text-right\">\n                        <div class=\"btn-group\">\n                            <button type=\"submit\"\n                                    [routerLink]=\"['/product', product.id, 'view']\"\n                                    class=\"btn btn-info btn-sm\">\n                                <fa-icon icon=\"eye\"></fa-icon>\n                                <span class=\"d-none d-md-inline\" jhiTranslate=\"entity.action.view\">View</span>\n                            </button>\n\n                            <button type=\"submit\"\n                                    [routerLink]=\"['/product', product.id, 'edit']\"\n                                    class=\"btn btn-primary btn-sm\">\n                                <fa-icon icon=\"pencil-alt\"></fa-icon>\n                                <span class=\"d-none d-md-inline\" jhiTranslate=\"entity.action.edit\">Edit</span>\n                            </button>\n\n                            <button type=\"submit\" (click)=\"delete(product)\"\n                                    class=\"btn btn-danger btn-sm\">\n                                <fa-icon icon=\"times\"></fa-icon>\n                                <span class=\"d-none d-md-inline\" jhiTranslate=\"entity.action.delete\">Delete</span>\n                            </button>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>\n";

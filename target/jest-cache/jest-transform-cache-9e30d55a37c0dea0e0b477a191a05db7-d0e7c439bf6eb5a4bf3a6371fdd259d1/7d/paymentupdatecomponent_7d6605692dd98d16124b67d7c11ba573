@@ -1,0 +1,42 @@
+2349f4a11ef95a921c484ad08f7a640e
+/* istanbul ignore next */
+var cov_lzyxtr5gt = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/payment/payment-update.component.html";
+  var hash = "308972bc917af898878ad6cb0647d66786cf01d0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/payment/payment-update.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 2661
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "308972bc917af898878ad6cb0647d66786cf01d0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_lzyxtr5gt.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <form name=\"editForm\" role=\"form\" novalidate (ngSubmit)=\"save()\" [formGroup]=\"editForm\">\n            <h2 id=\"jhi-payment-heading\" jhiTranslate=\"coopcycleApp.payment.home.createOrEditLabel\">Create or edit a Payment</h2>\n\n            <div>\n                <jhi-alert-error></jhi-alert-error>\n\n                <div class=\"form-group\" [hidden]=\"!editForm.get('id')!.value\">\n                    <label for=\"id\" jhiTranslate=\"global.field.id\">ID</label>\n                    <input type=\"text\" class=\"form-control\" id=\"id\" name=\"id\" formControlName=\"id\" readonly />\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.payment.paymentMethod\" for=\"field_paymentMethod\">Payment Method</label>\n                    <select class=\"form-control\" name=\"paymentMethod\" formControlName=\"paymentMethod\" id=\"field_paymentMethod\">\n                        <option value=\"CB\">{{ 'coopcycleApp.PaymentMethod.CB' | translate }}</option>\n                        <option value=\"BITCOIN\">{{ 'coopcycleApp.PaymentMethod.BITCOIN' | translate }}</option>\n                        <option value=\"PAYPAL\">{{ 'coopcycleApp.PaymentMethod.PAYPAL' | translate }}</option>\n                        <option value=\"IZLY\">{{ 'coopcycleApp.PaymentMethod.IZLY' | translate }}</option>\n                    </select>\n                    <div *ngIf=\"editForm.get('paymentMethod')!.invalid && (editForm.get('paymentMethod')!.dirty || editForm.get('paymentMethod')!.touched)\">\n                        <small class=\"form-text text-danger\"\n                               *ngIf=\"editForm.get('paymentMethod')?.errors?.required\" jhiTranslate=\"entity.validation.required\">\n                        This field is required.\n                        </small>\n                    </div>\n                </div>\n            </div>\n\n            <div>\n                <button type=\"button\" id=\"cancel-save\" class=\"btn btn-secondary\" (click)=\"previousState()\">\n                    <fa-icon icon=\"ban\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.cancel\">Cancel</span>\n                </button>\n\n                <button type=\"submit\" id=\"save-entity\" [disabled]=\"editForm.invalid || isSaving\" class=\"btn btn-primary\">\n                    <fa-icon icon=\"save\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.save\">Save</span>\n                </button>\n            </div>\n        </form>\n    </div>\n</div>\n";

@@ -1,0 +1,1 @@
+{"file":"/home/ali/exemple-jhipster/testbed/src/main/webapp/app/shared/constants/pagination.constants.ts","mappings":";;AAAa,QAAA,cAAc,GAAG,EAAE,CAAC","names":[],"sources":["/home/ali/exemple-jhipster/testbed/src/main/webapp/app/shared/constants/pagination.constants.ts"],"sourcesContent":["export const ITEMS_PER_PAGE = 20;\n"],"version":3}

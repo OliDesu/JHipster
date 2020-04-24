@@ -1,0 +1,42 @@
+f9314f553d0b566428d763d20f30b855
+/* istanbul ignore next */
+var cov_xgu95b5ua = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/restaurant/restaurant-detail.component.html";
+  var hash = "f365e9375c67503f0820db0fd62a65454b3da3ac";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/restaurant/restaurant-detail.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 1619
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "f365e9375c67503f0820db0fd62a65454b3da3ac"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_xgu95b5ua.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <div *ngIf=\"restaurant\">\n            <h2><span jhiTranslate=\"coopcycleApp.restaurant.detail.title\">Restaurant</span> {{ restaurant.id }}</h2>\n\n            <hr>\n\n            <jhi-alert-error></jhi-alert-error>\n\n            <dl class=\"row-md jh-entity-details\">\n                <dt><span jhiTranslate=\"coopcycleApp.restaurant.restaurantId\">Restaurant Id</span></dt>\n                <dd>\n                    <span>{{ restaurant.restaurantId }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.restaurant.name\">Name</span></dt>\n                <dd>\n                    <span>{{ restaurant.name }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.restaurant.description\">Description</span></dt>\n                <dd>\n                    <span>{{ restaurant.description }}</span>\n                </dd>\n            </dl>\n\n            <button type=\"submit\"\n                    (click)=\"previousState()\"\n                    class=\"btn btn-info\">\n                <fa-icon icon=\"arrow-left\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.back\">Back</span>\n            </button>\n\n            <button type=\"button\"\n                    [routerLink]=\"['/restaurant', restaurant.id, 'edit']\"\n                    class=\"btn btn-primary\">\n                <fa-icon icon=\"pencil-alt\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.edit\">Edit</span>\n            </button>\n        </div>\n    </div>\n</div>\n";

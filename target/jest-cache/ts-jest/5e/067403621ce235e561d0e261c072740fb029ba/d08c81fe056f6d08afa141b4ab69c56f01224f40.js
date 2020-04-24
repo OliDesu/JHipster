@@ -1,0 +1,32 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const core_1 = require("@angular/core");
+const router_1 = require("@angular/router");
+const operators_1 = require("rxjs/operators");
+const login_modal_service_1 = require("app/core/login/login-modal.service");
+const activate_service_1 = require("./activate.service");
+let ActivateComponent = class ActivateComponent {
+    constructor(activateService, loginModalService, route) {
+        this.activateService = activateService;
+        this.loginModalService = loginModalService;
+        this.route = route;
+        this.error = false;
+        this.success = false;
+    }
+    ngOnInit() {
+        this.route.queryParams.pipe(operators_1.flatMap(params => this.activateService.get(params.key))).subscribe(() => (this.success = true), () => (this.error = true));
+    }
+    login() {
+        this.loginModalService.open();
+    }
+};
+ActivateComponent = tslib_1.__decorate([
+    core_1.Component({
+        selector: 'jhi-activate',
+        template: require('./activate.component.html')
+    }),
+    tslib_1.__metadata("design:paramtypes", [activate_service_1.ActivateService, login_modal_service_1.LoginModalService, router_1.ActivatedRoute])
+], ActivateComponent);
+exports.ActivateComponent = ActivateComponent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2FjY291bnQvYWN0aXZhdGUvYWN0aXZhdGUuY29tcG9uZW50LnRzIiwibWFwcGluZ3MiOiI7OztBQUFBLHdDQUFrRDtBQUNsRCw0Q0FBaUQ7QUFDakQsOENBQXlDO0FBRXpDLDRFQUF1RTtBQUN2RSx5REFBcUQ7QUFNckQsSUFBYSxpQkFBaUIsR0FBOUIsTUFBYSxpQkFBaUI7SUFJNUIsWUFBb0IsZUFBZ0MsRUFBVSxpQkFBb0MsRUFBVSxLQUFxQjtRQUE3RyxvQkFBZSxHQUFmLGVBQWUsQ0FBaUI7UUFBVSxzQkFBaUIsR0FBakIsaUJBQWlCLENBQW1CO1FBQVUsVUFBSyxHQUFMLEtBQUssQ0FBZ0I7UUFIakksVUFBSyxHQUFHLEtBQUssQ0FBQztRQUNkLFlBQU8sR0FBRyxLQUFLLENBQUM7SUFFb0gsQ0FBQztJQUVySSxRQUFRO1FBQ04sSUFBSSxDQUFDLEtBQUssQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLG1CQUFPLENBQUMsTUFBTSxDQUFDLEVBQUUsQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLFNBQVMsQ0FDNUYsR0FBRyxFQUFFLENBQUMsQ0FBQyxJQUFJLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQyxFQUMzQixHQUFHLEVBQUUsQ0FBQyxDQUFDLElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDLENBQzFCLENBQUM7SUFDSixDQUFDO0lBRUQsS0FBSztRQUNILElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUNoQyxDQUFDO0NBQ0YsQ0FBQTtBQWhCWSxpQkFBaUI7SUFKN0IsZ0JBQVMsQ0FBQztRQUNULFFBQVEsRUFBRSxjQUFjO1FBQ3hCLGtCQUFhLDJCQUEyQixDQUFBO0tBQ3pDLENBQUM7NkNBS3FDLGtDQUFlLEVBQTZCLHVDQUFpQixFQUFpQix1QkFBYztHQUp0SCxpQkFBaUIsQ0FnQjdCO0FBaEJZLDhDQUFpQiIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvaG9tZS9hbGkvZXhlbXBsZS1qaGlwc3Rlci90ZXN0YmVkL3NyYy9tYWluL3dlYmFwcC9hcHAvYWNjb3VudC9hY3RpdmF0ZS9hY3RpdmF0ZS5jb21wb25lbnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBPbkluaXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEFjdGl2YXRlZFJvdXRlIH0gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcbmltcG9ydCB7IGZsYXRNYXAgfSBmcm9tICdyeGpzL29wZXJhdG9ycyc7XG5cbmltcG9ydCB7IExvZ2luTW9kYWxTZXJ2aWNlIH0gZnJvbSAnYXBwL2NvcmUvbG9naW4vbG9naW4tbW9kYWwuc2VydmljZSc7XG5pbXBvcnQgeyBBY3RpdmF0ZVNlcnZpY2UgfSBmcm9tICcuL2FjdGl2YXRlLnNlcnZpY2UnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdqaGktYWN0aXZhdGUnLFxuICB0ZW1wbGF0ZVVybDogJy4vYWN0aXZhdGUuY29tcG9uZW50Lmh0bWwnXG59KVxuZXhwb3J0IGNsYXNzIEFjdGl2YXRlQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcbiAgZXJyb3IgPSBmYWxzZTtcbiAgc3VjY2VzcyA9IGZhbHNlO1xuXG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgYWN0aXZhdGVTZXJ2aWNlOiBBY3RpdmF0ZVNlcnZpY2UsIHByaXZhdGUgbG9naW5Nb2RhbFNlcnZpY2U6IExvZ2luTW9kYWxTZXJ2aWNlLCBwcml2YXRlIHJvdXRlOiBBY3RpdmF0ZWRSb3V0ZSkge31cblxuICBuZ09uSW5pdCgpOiB2b2lkIHtcbiAgICB0aGlzLnJvdXRlLnF1ZXJ5UGFyYW1zLnBpcGUoZmxhdE1hcChwYXJhbXMgPT4gdGhpcy5hY3RpdmF0ZVNlcnZpY2UuZ2V0KHBhcmFtcy5rZXkpKSkuc3Vic2NyaWJlKFxuICAgICAgKCkgPT4gKHRoaXMuc3VjY2VzcyA9IHRydWUpLFxuICAgICAgKCkgPT4gKHRoaXMuZXJyb3IgPSB0cnVlKVxuICAgICk7XG4gIH1cblxuICBsb2dpbigpOiB2b2lkIHtcbiAgICB0aGlzLmxvZ2luTW9kYWxTZXJ2aWNlLm9wZW4oKTtcbiAgfVxufVxuIl0sInZlcnNpb24iOjN9

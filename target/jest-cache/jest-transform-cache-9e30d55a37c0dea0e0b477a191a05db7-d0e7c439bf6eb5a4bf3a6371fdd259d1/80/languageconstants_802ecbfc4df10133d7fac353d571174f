@@ -1,0 +1,66 @@
+69cb9d6b703def6cdbb714f3cd094705
+"use strict";
+
+/* istanbul ignore next */
+var cov_1bgzt20ski = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/core/language/language.constants.ts";
+  var hash = "a48a481ddfb73ab54c2cd46f2ddb7223c7f54d67";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/core/language/language.constants.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "a48a481ddfb73ab54c2cd46f2ddb7223c7f54d67"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1bgzt20ski.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/*
+    Languages codes are ISO_639-1 codes, see http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+    They are written in English to avoid character encoding issues (not a perfect solution)
+*/
+
+/* istanbul ignore next */
+cov_1bgzt20ski.s[1]++;
+exports.LANGUAGES = ['en', 'fr' // jhipster-needle-i18n-language-constant - JHipster will add/remove languages in this array
+];

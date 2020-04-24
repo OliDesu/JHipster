@@ -1,0 +1,42 @@
+9f13942b14851c31b677c9eafd5c64c7
+/* istanbul ignore next */
+var cov_d9sljsc63 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/product/product-detail.component.html";
+  var hash = "c12b359dc452c065ff4ba528bc291ad9a057abfd";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/product/product-detail.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 2349
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "c12b359dc452c065ff4ba528bc291ad9a057abfd"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_d9sljsc63.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <div *ngIf=\"product\">\n            <h2><span jhiTranslate=\"coopcycleApp.product.detail.title\">Product</span> {{ product.id }}</h2>\n\n            <hr>\n\n            <jhi-alert-error></jhi-alert-error>\n\n            <dl class=\"row-md jh-entity-details\">\n                <dt><span jhiTranslate=\"coopcycleApp.product.price\">Price</span></dt>\n                <dd>\n                    <span>{{ product.price }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.product.disponibility\">Disponibility</span></dt>\n                <dd>\n                    <span jhiTranslate=\"{{ 'coopcycleApp.Disponibility.' + product.disponibility }}\">{{ product.disponibility }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.product.description\">Description</span></dt>\n                <dd>\n                    <span>{{ product.description }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.product.basket\">Basket</span></dt>\n                <dd>\n                    <div *ngIf=\"product.basket\">\n                        <a [routerLink]=\"['/basket', product.basket?.id, 'view']\">{{ product.basket?.id }}</a>\n                    </div>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.product.restaurant\">Restaurant</span></dt>\n                <dd>\n                    <div *ngIf=\"product.restaurant\">\n                        <a [routerLink]=\"['/restaurant', product.restaurant?.id, 'view']\">{{ product.restaurant?.id }}</a>\n                    </div>\n                </dd>\n            </dl>\n\n            <button type=\"submit\"\n                    (click)=\"previousState()\"\n                    class=\"btn btn-info\">\n                <fa-icon icon=\"arrow-left\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.back\">Back</span>\n            </button>\n\n            <button type=\"button\"\n                    [routerLink]=\"['/product', product.id, 'edit']\"\n                    class=\"btn btn-primary\">\n                <fa-icon icon=\"pencil-alt\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.edit\">Edit</span>\n            </button>\n        </div>\n    </div>\n</div>\n";

@@ -1,0 +1,42 @@
+953b03dced5d05fe22157cbbc45ef6a5
+/* istanbul ignore next */
+var cov_bbdqq243w = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/account/activate/activate.component.html";
+  var hash = "0f25ce251f90f833045329615326932f4fb29690";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/account/activate/activate.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 803
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "0f25ce251f90f833045329615326932f4fb29690"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_bbdqq243w.s[0]++;
+module.exports = "<div>\n    <div class=\"row justify-content-center\">\n        <div class=\"col-md-8\">\n            <h1 jhiTranslate=\"activate.title\">Activation</h1>\n\n            <div class=\"alert alert-success\" *ngIf=\"success\">\n                <span jhiTranslate=\"activate.messages.success\"><strong>Your user account has been activated.</strong> Please </span>\n                <a class=\"alert-link\" (click)=\"login()\" jhiTranslate=\"global.messages.info.authenticated.link\">sign in</a>.\n            </div>\n\n            <div class=\"alert alert-danger\" *ngIf=\"error\" jhiTranslate=\"activate.messages.error\">\n                <strong>Your user could not be activated.</strong> Please use the registration form to sign up.\n            </div>\n        </div>\n    </div>\n</div>\n";

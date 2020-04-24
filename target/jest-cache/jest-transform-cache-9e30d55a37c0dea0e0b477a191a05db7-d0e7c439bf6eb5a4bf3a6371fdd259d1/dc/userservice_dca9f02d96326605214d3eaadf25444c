@@ -1,0 +1,501 @@
+bab8c93dcf0e46097339eb749147ea12
+"use strict";
+
+/* istanbul ignore next */
+var cov_18oz0bpyo6 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/core/user/user.service.ts";
+  var hash = "3a73ed0af5dc3c0d8ce346f8d660de3ebe316cde";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/core/user/user.service.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 15
+        },
+        end: {
+          line: 5,
+          column: 46
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 24
+        },
+        end: {
+          line: 6,
+          column: 52
+        }
+      },
+      "5": {
+        start: {
+          line: 7,
+          column: 23
+        },
+        end: {
+          line: 7,
+          column: 62
+        }
+      },
+      "6": {
+        start: {
+          line: 8,
+          column: 18
+        },
+        end: {
+          line: 32,
+          column: 1
+        }
+      },
+      "7": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 25
+        }
+      },
+      "8": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 72
+        }
+      },
+      "9": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 54
+        }
+      },
+      "10": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 53
+        }
+      },
+      "11": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 61
+        }
+      },
+      "12": {
+        start: {
+          line: 23,
+          column: 24
+        },
+        end: {
+          line: 23,
+          column: 63
+        }
+      },
+      "13": {
+        start: {
+          line: 24,
+          column: 8
+        },
+        end: {
+          line: 24,
+          column: 89
+        }
+      },
+      "14": {
+        start: {
+          line: 27,
+          column: 8
+        },
+        end: {
+          line: 27,
+          column: 64
+        }
+      },
+      "15": {
+        start: {
+          line: 30,
+          column: 8
+        },
+        end: {
+          line: 30,
+          column: 87
+        }
+      },
+      "16": {
+        start: {
+          line: 33,
+          column: 0
+        },
+        end: {
+          line: 36,
+          column: 16
+        }
+      },
+      "17": {
+        start: {
+          line: 37,
+          column: 0
+        },
+        end: {
+          line: 37,
+          column: 34
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 22
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 17
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 17
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        line: 16
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 19,
+            column: 4
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 16
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        line: 19
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 22,
+            column: 4
+          },
+          end: {
+            line: 22,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 22,
+            column: 15
+          },
+          end: {
+            line: 25,
+            column: 5
+          }
+        },
+        line: 22
+      },
+      "5": {
+        name: "(anonymous_5)",
+        decl: {
+          start: {
+            line: 26,
+            column: 4
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 26,
+            column: 18
+          },
+          end: {
+            line: 28,
+            column: 5
+          }
+        },
+        line: 26
+      },
+      "6": {
+        name: "(anonymous_6)",
+        decl: {
+          start: {
+            line: 29,
+            column: 4
+          },
+          end: {
+            line: 29,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 29,
+            column: 18
+          },
+          end: {
+            line: 31,
+            column: 5
+          }
+        },
+        line: 29
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "3a73ed0af5dc3c0d8ce346f8d660de3ebe316cde"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_18oz0bpyo6.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_18oz0bpyo6.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_18oz0bpyo6.s[2]++, require("@angular/core"));
+const http_1 =
+/* istanbul ignore next */
+(cov_18oz0bpyo6.s[3]++, require("@angular/common/http"));
+const app_constants_1 =
+/* istanbul ignore next */
+(cov_18oz0bpyo6.s[4]++, require("app/app.constants"));
+const request_util_1 =
+/* istanbul ignore next */
+(cov_18oz0bpyo6.s[5]++, require("app/shared/util/request-util"));
+
+/* istanbul ignore next */
+cov_18oz0bpyo6.s[6]++;
+let UserService = class UserService {
+  constructor(http) {
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.f[0]++;
+    cov_18oz0bpyo6.s[7]++;
+    this.http = http;
+
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.s[8]++;
+    this.resourceUrl = app_constants_1.SERVER_API_URL + 'api/users';
+  }
+
+  create(user) {
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.f[1]++;
+    cov_18oz0bpyo6.s[9]++;
+    return this.http.post(this.resourceUrl, user);
+  }
+
+  update(user) {
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.f[2]++;
+    cov_18oz0bpyo6.s[10]++;
+    return this.http.put(this.resourceUrl, user);
+  }
+
+  find(login) {
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.f[3]++;
+    cov_18oz0bpyo6.s[11]++;
+    return this.http.get(`${this.resourceUrl}/${login}`);
+  }
+
+  query(req) {
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.f[4]++;
+    const options =
+    /* istanbul ignore next */
+    (cov_18oz0bpyo6.s[12]++, request_util_1.createRequestOption(req));
+
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.s[13]++;
+    return this.http.get(this.resourceUrl, {
+      params: options,
+      observe: 'response'
+    });
+  }
+
+  delete(login) {
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.f[5]++;
+    cov_18oz0bpyo6.s[14]++;
+    return this.http.delete(`${this.resourceUrl}/${login}`);
+  }
+
+  authorities() {
+    /* istanbul ignore next */
+    cov_18oz0bpyo6.f[6]++;
+    cov_18oz0bpyo6.s[15]++;
+    return this.http.get(app_constants_1.SERVER_API_URL + 'api/users/authorities');
+  }
+
+};
+
+/* istanbul ignore next */
+cov_18oz0bpyo6.s[16]++;
+UserService = tslib_1.__decorate([core_1.Injectable({
+  providedIn: 'root'
+}), tslib_1.__metadata("design:paramtypes", [http_1.HttpClient])], UserService);
+
+/* istanbul ignore next */
+cov_18oz0bpyo6.s[17]++;
+exports.UserService = UserService;

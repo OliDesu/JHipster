@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Basket.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coopcycle</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.myapp.domain</a> &gt; <span class="el_source">Basket.java</span></div><h1>Basket.java</h1><pre class="source lang-java linenums">package com.mycompany.myapp.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModel;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+import com.mycompany.myapp.domain.enumeration.BasketState;
+
+/**
+ * The Basket entity.
+ */
+@ApiModel(description = &quot;The Basket entity.&quot;)
+@Entity
+@Table(name = &quot;basket&quot;)
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+<span class="fc" id="L23">public class Basket implements Serializable {</span>
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = &quot;sequenceGenerator&quot;)
+    @SequenceGenerator(name = &quot;sequenceGenerator&quot;)
+    private Long id;
+
+    @NotNull
+    @Column(name = &quot;basket_id&quot;, nullable = false)
+    private Long basketId;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = &quot;basket_state&quot;, nullable = false)
+    private BasketState basketState;
+
+    @OneToOne
+    @JoinColumn(unique = true)
+    private User user;
+
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Course course;
+
+    @ManyToOne
+    @JsonIgnoreProperties(&quot;baskets&quot;)
+    private User customer;
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+<span class="fc" id="L55">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L59">        this.id = id;</span>
+<span class="fc" id="L60">    }</span>
+
+    public Long getBasketId() {
+<span class="fc" id="L63">        return basketId;</span>
+    }
+
+    public Basket basketId(Long basketId) {
+<span class="fc" id="L67">        this.basketId = basketId;</span>
+<span class="fc" id="L68">        return this;</span>
+    }
+
+    public void setBasketId(Long basketId) {
+<span class="fc" id="L72">        this.basketId = basketId;</span>
+<span class="fc" id="L73">    }</span>
+
+    public BasketState getBasketState() {
+<span class="fc" id="L76">        return basketState;</span>
+    }
+
+    public Basket basketState(BasketState basketState) {
+<span class="fc" id="L80">        this.basketState = basketState;</span>
+<span class="fc" id="L81">        return this;</span>
+    }
+
+    public void setBasketState(BasketState basketState) {
+<span class="fc" id="L85">        this.basketState = basketState;</span>
+<span class="fc" id="L86">    }</span>
+
+    public User getUser() {
+<span class="fc" id="L89">        return user;</span>
+    }
+
+    public Basket user(User user) {
+<span class="nc" id="L93">        this.user = user;</span>
+<span class="nc" id="L94">        return this;</span>
+    }
+
+    public void setUser(User user) {
+<span class="nc" id="L98">        this.user = user;</span>
+<span class="nc" id="L99">    }</span>
+
+    public Course getCourse() {
+<span class="fc" id="L102">        return course;</span>
+    }
+
+    public Basket course(Course course) {
+<span class="nc" id="L106">        this.course = course;</span>
+<span class="nc" id="L107">        return this;</span>
+    }
+
+    public void setCourse(Course course) {
+<span class="nc" id="L111">        this.course = course;</span>
+<span class="nc" id="L112">    }</span>
+
+    public User getCustomer() {
+<span class="fc" id="L115">        return customer;</span>
+    }
+
+    public Basket customer(User user) {
+<span class="nc" id="L119">        this.customer = user;</span>
+<span class="nc" id="L120">        return this;</span>
+    }
+
+    public void setCustomer(User user) {
+<span class="nc" id="L124">        this.customer = user;</span>
+<span class="nc" id="L125">    }</span>
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L130" title="All 2 branches missed.">        if (this == o) {</span>
+<span class="nc" id="L131">            return true;</span>
+        }
+<span class="nc bnc" id="L133" title="All 2 branches missed.">        if (!(o instanceof Basket)) {</span>
+<span class="nc" id="L134">            return false;</span>
+        }
+<span class="nc bnc" id="L136" title="All 4 branches missed.">        return id != null &amp;&amp; id.equals(((Basket) o).id);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L141">        return 31;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L146">        return &quot;Basket{&quot; +</span>
+<span class="nc" id="L147">            &quot;id=&quot; + getId() +</span>
+<span class="nc" id="L148">            &quot;, basketId=&quot; + getBasketId() +</span>
+<span class="nc" id="L149">            &quot;, basketState='&quot; + getBasketState() + &quot;'&quot; +</span>
+            &quot;}&quot;;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

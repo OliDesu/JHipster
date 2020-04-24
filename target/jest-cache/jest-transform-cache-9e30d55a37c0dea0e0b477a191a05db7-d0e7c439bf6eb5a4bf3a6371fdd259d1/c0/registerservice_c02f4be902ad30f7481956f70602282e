@@ -1,0 +1,238 @@
+d57b7d589721eee1b37ac778f12749d7
+"use strict";
+
+/* istanbul ignore next */
+var cov_22yshy43q7 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/account/register/register.service.ts";
+  var hash = "a9fedc898a99cc2fa15577dbc7725d7e8721a96e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/account/register/register.service.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 15
+        },
+        end: {
+          line: 5,
+          column: 46
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 24
+        },
+        end: {
+          line: 6,
+          column: 52
+        }
+      },
+      "5": {
+        start: {
+          line: 7,
+          column: 22
+        },
+        end: {
+          line: 14,
+          column: 1
+        }
+      },
+      "6": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 25
+        }
+      },
+      "7": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 88
+        }
+      },
+      "8": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 18,
+          column: 20
+        }
+      },
+      "9": {
+        start: {
+          line: 19,
+          column: 0
+        },
+        end: {
+          line: 19,
+          column: 42
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 22
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 18
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 11
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "a9fedc898a99cc2fa15577dbc7725d7e8721a96e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_22yshy43q7.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_22yshy43q7.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_22yshy43q7.s[2]++, require("@angular/core"));
+const http_1 =
+/* istanbul ignore next */
+(cov_22yshy43q7.s[3]++, require("@angular/common/http"));
+const app_constants_1 =
+/* istanbul ignore next */
+(cov_22yshy43q7.s[4]++, require("app/app.constants"));
+
+/* istanbul ignore next */
+cov_22yshy43q7.s[5]++;
+let RegisterService = class RegisterService {
+  constructor(http) {
+    /* istanbul ignore next */
+    cov_22yshy43q7.f[0]++;
+    cov_22yshy43q7.s[6]++;
+    this.http = http;
+  }
+
+  save(account) {
+    /* istanbul ignore next */
+    cov_22yshy43q7.f[1]++;
+    cov_22yshy43q7.s[7]++;
+    return this.http.post(app_constants_1.SERVER_API_URL + 'api/register', account);
+  }
+
+};
+
+/* istanbul ignore next */
+cov_22yshy43q7.s[8]++;
+RegisterService = tslib_1.__decorate([core_1.Injectable({
+  providedIn: 'root'
+}), tslib_1.__metadata("design:paramtypes", [http_1.HttpClient])], RegisterService);
+
+/* istanbul ignore next */
+cov_22yshy43q7.s[9]++;
+exports.RegisterService = RegisterService;

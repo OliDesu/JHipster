@@ -1,0 +1,42 @@
+39e3a97aaf5b4e0f1ae21930342f998f
+/* istanbul ignore next */
+var cov_2cap8jaua0 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/product/product-update.component.html";
+  var hash = "ca9dbc135c138ff55cfda1bfc15be87411286148";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/product/product-update.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 5140
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "ca9dbc135c138ff55cfda1bfc15be87411286148"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2cap8jaua0.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <form name=\"editForm\" role=\"form\" novalidate (ngSubmit)=\"save()\" [formGroup]=\"editForm\">\n            <h2 id=\"jhi-product-heading\" jhiTranslate=\"coopcycleApp.product.home.createOrEditLabel\">Create or edit a Product</h2>\n\n            <div>\n                <jhi-alert-error></jhi-alert-error>\n\n                <div class=\"form-group\" [hidden]=\"!editForm.get('id')!.value\">\n                    <label for=\"id\" jhiTranslate=\"global.field.id\">ID</label>\n                    <input type=\"text\" class=\"form-control\" id=\"id\" name=\"id\" formControlName=\"id\" readonly />\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.product.price\" for=\"field_price\">Price</label>\n                    <input type=\"number\" class=\"form-control\" name=\"price\" id=\"field_price\"\n                           formControlName=\"price\"/>\n                    <div *ngIf=\"editForm.get('price')!.invalid && (editForm.get('price')!.dirty || editForm.get('price')!.touched)\">\n                        <small class=\"form-text text-danger\"\n                               *ngIf=\"editForm.get('price')?.errors?.required\" jhiTranslate=\"entity.validation.required\">\n                        This field is required.\n                        </small>\n                        <small class=\"form-text text-danger\"\n                               *ngIf=\"editForm.get('price')?.errors?.min\" jhiTranslate=\"entity.validation.min\" [translateValues]=\"{ min: 0 }\">\n                            This field should be at least 0.\n                        </small>\n                        <small class=\"form-text text-danger\"\n                            [hidden]=\"!editForm.get('price')?.errors?.number\" jhiTranslate=\"entity.validation.number\">\n                            This field should be a number.\n                        </small>\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.product.disponibility\" for=\"field_disponibility\">Disponibility</label>\n                    <select class=\"form-control\" name=\"disponibility\" formControlName=\"disponibility\" id=\"field_disponibility\">\n                        <option value=\"AVAILABLE\">{{ 'coopcycleApp.Disponibility.AVAILABLE' | translate }}</option>\n                        <option value=\"UNAVAILABLE\">{{ 'coopcycleApp.Disponibility.UNAVAILABLE' | translate }}</option>\n                    </select>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.product.description\" for=\"field_description\">Description</label>\n                    <input type=\"text\" class=\"form-control\" name=\"description\" id=\"field_description\"\n                           formControlName=\"description\"/>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.product.basket\" for=\"field_basket\">Basket</label>\n                    <select class=\"form-control\" id=\"field_basket\" name=\"basket\" formControlName=\"basket\">\n                        <option [ngValue]=\"null\"></option>\n                        <option [ngValue]=\"basketOption.id === editForm.get('basket')!.value?.id ? editForm.get('basket')!.value : basketOption\" *ngFor=\"let basketOption of baskets; trackBy: trackById\">{{ basketOption.id }}</option>\n                    </select>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.product.restaurant\" for=\"field_restaurant\">Restaurant</label>\n                    <select class=\"form-control\" id=\"field_restaurant\" name=\"restaurant\" formControlName=\"restaurant\">\n                        <option [ngValue]=\"null\"></option>\n                        <option [ngValue]=\"restaurantOption.id === editForm.get('restaurant')!.value?.id ? editForm.get('restaurant')!.value : restaurantOption\" *ngFor=\"let restaurantOption of restaurants; trackBy: trackById\">{{ restaurantOption.id }}</option>\n                    </select>\n                </div>\n            </div>\n\n            <div>\n                <button type=\"button\" id=\"cancel-save\" class=\"btn btn-secondary\" (click)=\"previousState()\">\n                    <fa-icon icon=\"ban\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.cancel\">Cancel</span>\n                </button>\n\n                <button type=\"submit\" id=\"save-entity\" [disabled]=\"editForm.invalid || isSaving\" class=\"btn btn-primary\">\n                    <fa-icon icon=\"save\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.save\">Save</span>\n                </button>\n            </div>\n        </form>\n    </div>\n</div>\n";

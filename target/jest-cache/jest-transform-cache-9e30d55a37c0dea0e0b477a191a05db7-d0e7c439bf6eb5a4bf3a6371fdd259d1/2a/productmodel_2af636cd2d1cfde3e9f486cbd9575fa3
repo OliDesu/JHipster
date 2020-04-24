@@ -1,0 +1,184 @@
+5954891b7aac68d906f7241538df7151
+"use strict";
+
+/* istanbul ignore next */
+var cov_1yxkok4myq = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/shared/model/product.model.ts";
+  var hash = "50eb57ee6a437b1faa8b9228a1664b5b677a0dec";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/shared/model/product.model.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 5,
+          column: 8
+        },
+        end: {
+          line: 5,
+          column: 21
+        }
+      },
+      "2": {
+        start: {
+          line: 6,
+          column: 8
+        },
+        end: {
+          line: 6,
+          column: 27
+        }
+      },
+      "3": {
+        start: {
+          line: 7,
+          column: 8
+        },
+        end: {
+          line: 7,
+          column: 43
+        }
+      },
+      "4": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 39
+        }
+      },
+      "5": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 29
+        }
+      },
+      "6": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 37
+        }
+      },
+      "7": {
+        start: {
+          line: 13,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 26
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 4,
+            column: 4
+          },
+          end: {
+            line: 4,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 4,
+            column: 75
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        line: 4
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "50eb57ee6a437b1faa8b9228a1664b5b677a0dec"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1yxkok4myq.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+class Product {
+  constructor(id, price, disponibility, description, basket, restaurant) {
+    /* istanbul ignore next */
+    cov_1yxkok4myq.f[0]++;
+    cov_1yxkok4myq.s[1]++;
+    this.id = id;
+
+    /* istanbul ignore next */
+    cov_1yxkok4myq.s[2]++;
+    this.price = price;
+
+    /* istanbul ignore next */
+    cov_1yxkok4myq.s[3]++;
+    this.disponibility = disponibility;
+
+    /* istanbul ignore next */
+    cov_1yxkok4myq.s[4]++;
+    this.description = description;
+
+    /* istanbul ignore next */
+    cov_1yxkok4myq.s[5]++;
+    this.basket = basket;
+
+    /* istanbul ignore next */
+    cov_1yxkok4myq.s[6]++;
+    this.restaurant = restaurant;
+  }
+
+}
+
+/* istanbul ignore next */
+cov_1yxkok4myq.s[7]++;
+exports.Product = Product;

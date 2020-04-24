@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const core_1 = require("@angular/core");
+const http_1 = require("@angular/common/http");
+const app_constants_1 = require("app/app.constants");
+let PasswordResetInitService = class PasswordResetInitService {
+    constructor(http) {
+        this.http = http;
+    }
+    save(mail) {
+        return this.http.post(app_constants_1.SERVER_API_URL + 'api/account/reset-password/init', mail);
+    }
+};
+PasswordResetInitService = tslib_1.__decorate([
+    core_1.Injectable({ providedIn: 'root' }),
+    tslib_1.__metadata("design:paramtypes", [http_1.HttpClient])
+], PasswordResetInitService);
+exports.PasswordResetInitService = PasswordResetInitService;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2FjY291bnQvcGFzc3dvcmQtcmVzZXQvaW5pdC9wYXNzd29yZC1yZXNldC1pbml0LnNlcnZpY2UudHMiLCJtYXBwaW5ncyI6Ijs7O0FBQUEsd0NBQTJDO0FBQzNDLCtDQUFrRDtBQUdsRCxxREFBbUQ7QUFHbkQsSUFBYSx3QkFBd0IsR0FBckMsTUFBYSx3QkFBd0I7SUFDbkMsWUFBb0IsSUFBZ0I7UUFBaEIsU0FBSSxHQUFKLElBQUksQ0FBWTtJQUFHLENBQUM7SUFFeEMsSUFBSSxDQUFDLElBQVk7UUFDZixPQUFPLElBQUksQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLDhCQUFjLEdBQUcsaUNBQWlDLEVBQUUsSUFBSSxDQUFDLENBQUM7SUFDbEYsQ0FBQztDQUNGLENBQUE7QUFOWSx3QkFBd0I7SUFEcEMsaUJBQVUsQ0FBQyxFQUFFLFVBQVUsRUFBRSxNQUFNLEVBQUUsQ0FBQzs2Q0FFUCxpQkFBVTtHQUR6Qix3QkFBd0IsQ0FNcEM7QUFOWSw0REFBd0IiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvYWxpL2V4ZW1wbGUtamhpcHN0ZXIvdGVzdGJlZC9zcmMvbWFpbi93ZWJhcHAvYXBwL2FjY291bnQvcGFzc3dvcmQtcmVzZXQvaW5pdC9wYXNzd29yZC1yZXNldC1pbml0LnNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSW5qZWN0YWJsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgSHR0cENsaWVudCB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbi9odHRwJztcbmltcG9ydCB7IE9ic2VydmFibGUgfSBmcm9tICdyeGpzJztcblxuaW1wb3J0IHsgU0VSVkVSX0FQSV9VUkwgfSBmcm9tICdhcHAvYXBwLmNvbnN0YW50cyc7XG5cbkBJbmplY3RhYmxlKHsgcHJvdmlkZWRJbjogJ3Jvb3QnIH0pXG5leHBvcnQgY2xhc3MgUGFzc3dvcmRSZXNldEluaXRTZXJ2aWNlIHtcbiAgY29uc3RydWN0b3IocHJpdmF0ZSBodHRwOiBIdHRwQ2xpZW50KSB7fVxuXG4gIHNhdmUobWFpbDogc3RyaW5nKTogT2JzZXJ2YWJsZTx7fT4ge1xuICAgIHJldHVybiB0aGlzLmh0dHAucG9zdChTRVJWRVJfQVBJX1VSTCArICdhcGkvYWNjb3VudC9yZXNldC1wYXNzd29yZC9pbml0JywgbWFpbCk7XG4gIH1cbn1cbiJdLCJ2ZXJzaW9uIjozfQ==

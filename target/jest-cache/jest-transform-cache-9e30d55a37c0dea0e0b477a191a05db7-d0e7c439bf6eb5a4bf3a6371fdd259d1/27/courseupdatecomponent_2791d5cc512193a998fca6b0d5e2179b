@@ -1,0 +1,42 @@
+1175e4c621a32dc30fb301c948270d6a
+/* istanbul ignore next */
+var cov_28mxk4homv = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/course/course-update.component.html";
+  var hash = "87816fad33b944bb15f8a041289abefec564f13d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/course/course-update.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 4466
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "87816fad33b944bb15f8a041289abefec564f13d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_28mxk4homv.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <form name=\"editForm\" role=\"form\" novalidate (ngSubmit)=\"save()\" [formGroup]=\"editForm\">\n            <h2 id=\"jhi-course-heading\" jhiTranslate=\"coopcycleApp.course.home.createOrEditLabel\">Create or edit a Course</h2>\n\n            <div>\n                <jhi-alert-error></jhi-alert-error>\n\n                <div class=\"form-group\" [hidden]=\"!editForm.get('id')!.value\">\n                    <label for=\"id\" jhiTranslate=\"global.field.id\">ID</label>\n                    <input type=\"text\" class=\"form-control\" id=\"id\" name=\"id\" formControlName=\"id\" readonly />\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.course.state\" for=\"field_state\">State</label>\n                    <select class=\"form-control\" name=\"state\" formControlName=\"state\" id=\"field_state\">\n                        <option value=\"COMPLETED\">{{ 'coopcycleApp.CourseState.COMPLETED' | translate }}</option>\n                        <option value=\"PENDING\">{{ 'coopcycleApp.CourseState.PENDING' | translate }}</option>\n                        <option value=\"CANCELLED\">{{ 'coopcycleApp.CourseState.CANCELLED' | translate }}</option>\n                    </select>\n                    <div *ngIf=\"editForm.get('state')!.invalid && (editForm.get('state')!.dirty || editForm.get('state')!.touched)\">\n                        <small class=\"form-text text-danger\"\n                               *ngIf=\"editForm.get('state')?.errors?.required\" jhiTranslate=\"entity.validation.required\">\n                        This field is required.\n                        </small>\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.course.deliveryTime\" for=\"field_deliveryTime\">Delivery Time</label>\n                    <div class=\"d-flex\">\n                        <input id=\"field_deliveryTime\" type=\"datetime-local\" class=\"form-control\" name=\"deliveryTime\" formControlName=\"deliveryTime\" placeholder=\"YYYY-MM-DD HH:mm\"/>\n                    </div>\n                    <div *ngIf=\"editForm.get('deliveryTime')!.invalid && (editForm.get('deliveryTime')!.dirty || editForm.get('deliveryTime')!.touched)\">\n                        <small class=\"form-text text-danger\"\n                               *ngIf=\"editForm.get('deliveryTime')?.errors?.required\" jhiTranslate=\"entity.validation.required\">\n                        This field is required.\n                        </small>\n                        <small class=\"form-text text-danger\"\n                            [hidden]=\"!editForm.get('deliveryTime')?.errors?.ZonedDateTimelocal\" jhiTranslate=\"entity.validation.ZonedDateTimelocal\">\n                            This field should be a date and time.\n                        </small>\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"form-control-label\" jhiTranslate=\"coopcycleApp.course.restaurant\" for=\"field_restaurant\">Restaurant</label>\n                    <select class=\"form-control\" id=\"field_restaurant\" name=\"restaurant\" formControlName=\"restaurant\">\n                        <option [ngValue]=\"null\"></option>\n                        <option [ngValue]=\"restaurantOption.id === editForm.get('restaurant')!.value?.id ? editForm.get('restaurant')!.value : restaurantOption\" *ngFor=\"let restaurantOption of restaurants; trackBy: trackById\">{{ restaurantOption.id }}</option>\n                    </select>\n                </div>\n            </div>\n\n            <div>\n                <button type=\"button\" id=\"cancel-save\" class=\"btn btn-secondary\" (click)=\"previousState()\">\n                    <fa-icon icon=\"ban\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.cancel\">Cancel</span>\n                </button>\n\n                <button type=\"submit\" id=\"save-entity\" [disabled]=\"editForm.invalid || isSaving\" class=\"btn btn-primary\">\n                    <fa-icon icon=\"save\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.save\">Save</span>\n                </button>\n            </div>\n        </form>\n    </div>\n</div>\n";

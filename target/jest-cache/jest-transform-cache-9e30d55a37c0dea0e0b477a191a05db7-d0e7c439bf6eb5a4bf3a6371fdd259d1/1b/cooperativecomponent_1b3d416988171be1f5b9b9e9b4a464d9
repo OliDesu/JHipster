@@ -1,0 +1,724 @@
+aff160b94d1c952b75e67e1d90310bc6
+"use strict";
+
+/* istanbul ignore next */
+var cov_7ktqjtgiy = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/cooperative/cooperative.component.ts";
+  var hash = "de8f3d8884615d2558436da29366201719d483c7";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/cooperative/cooperative.component.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 22
+        },
+        end: {
+          line: 5,
+          column: 44
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 23
+        },
+        end: {
+          line: 6,
+          column: 60
+        }
+      },
+      "5": {
+        start: {
+          line: 7,
+          column: 30
+        },
+        end: {
+          line: 7,
+          column: 62
+        }
+      },
+      "6": {
+        start: {
+          line: 8,
+          column: 46
+        },
+        end: {
+          line: 8,
+          column: 94
+        }
+      },
+      "7": {
+        start: {
+          line: 9,
+          column: 27
+        },
+        end: {
+          line: 38,
+          column: 1
+        }
+      },
+      "8": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 53
+        }
+      },
+      "9": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 41
+        }
+      },
+      "10": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 41
+        }
+      },
+      "11": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 97
+        }
+      },
+      "12": {
+        start: {
+          line: 16,
+          column: 60
+        },
+        end: {
+          line: 16,
+          column: 94
+        }
+      },
+      "13": {
+        start: {
+          line: 19,
+          column: 8
+        },
+        end: {
+          line: 19,
+          column: 23
+        }
+      },
+      "14": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 44
+        }
+      },
+      "15": {
+        start: {
+          line: 23,
+          column: 8
+        },
+        end: {
+          line: 25,
+          column: 9
+        }
+      },
+      "16": {
+        start: {
+          line: 24,
+          column: 12
+        },
+        end: {
+          line: 24,
+          column: 60
+        }
+      },
+      "17": {
+        start: {
+          line: 29,
+          column: 8
+        },
+        end: {
+          line: 29,
+          column: 23
+        }
+      },
+      "18": {
+        start: {
+          line: 32,
+          column: 8
+        },
+        end: {
+          line: 32,
+          column: 112
+        }
+      },
+      "19": {
+        start: {
+          line: 32,
+          column: 96
+        },
+        end: {
+          line: 32,
+          column: 110
+        }
+      },
+      "20": {
+        start: {
+          line: 35,
+          column: 25
+        },
+        end: {
+          line: 35,
+          column: 155
+        }
+      },
+      "21": {
+        start: {
+          line: 36,
+          column: 8
+        },
+        end: {
+          line: 36,
+          column: 61
+        }
+      },
+      "22": {
+        start: {
+          line: 39,
+          column: 0
+        },
+        end: {
+          line: 47,
+          column: 25
+        }
+      },
+      "23": {
+        start: {
+          line: 48,
+          column: 0
+        },
+        end: {
+          line: 48,
+          column: 52
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 64
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 15,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 14
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 15
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 16,
+            column: 50
+          },
+          end: {
+            line: 16,
+            column: 51
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 60
+          },
+          end: {
+            line: 16,
+            column: 94
+          }
+        },
+        line: 16
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 18,
+            column: 4
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 18,
+            column: 15
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        line: 18
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 22,
+            column: 4
+          },
+          end: {
+            line: 22,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 22,
+            column: 18
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        },
+        line: 22
+      },
+      "5": {
+        name: "(anonymous_5)",
+        decl: {
+          start: {
+            line: 27,
+            column: 4
+          },
+          end: {
+            line: 27,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 27,
+            column: 25
+          },
+          end: {
+            line: 30,
+            column: 5
+          }
+        },
+        line: 27
+      },
+      "6": {
+        name: "(anonymous_6)",
+        decl: {
+          start: {
+            line: 31,
+            column: 4
+          },
+          end: {
+            line: 31,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 31,
+            column: 35
+          },
+          end: {
+            line: 33,
+            column: 5
+          }
+        },
+        line: 31
+      },
+      "7": {
+        name: "(anonymous_7)",
+        decl: {
+          start: {
+            line: 32,
+            column: 90
+          },
+          end: {
+            line: 32,
+            column: 91
+          }
+        },
+        loc: {
+          start: {
+            line: 32,
+            column: 96
+          },
+          end: {
+            line: 32,
+            column: 110
+          }
+        },
+        line: 32
+      },
+      "8": {
+        name: "(anonymous_8)",
+        decl: {
+          start: {
+            line: 34,
+            column: 4
+          },
+          end: {
+            line: 34,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 34,
+            column: 24
+          },
+          end: {
+            line: 37,
+            column: 5
+          }
+        },
+        line: 34
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 16,
+            column: 80
+          },
+          end: {
+            line: 16,
+            column: 94
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 16,
+            column: 80
+          },
+          end: {
+            line: 16,
+            column: 88
+          }
+        }, {
+          start: {
+            line: 16,
+            column: 92
+          },
+          end: {
+            line: 16,
+            column: 94
+          }
+        }],
+        line: 16
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 23,
+            column: 8
+          },
+          end: {
+            line: 25,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 23,
+            column: 8
+          },
+          end: {
+            line: 25,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 23,
+            column: 8
+          },
+          end: {
+            line: 25,
+            column: 9
+          }
+        }],
+        line: 23
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "de8f3d8884615d2558436da29366201719d483c7"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_7ktqjtgiy.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_7ktqjtgiy.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_7ktqjtgiy.s[2]++, require("@angular/core"));
+const ng_jhipster_1 =
+/* istanbul ignore next */
+(cov_7ktqjtgiy.s[3]++, require("ng-jhipster"));
+const ng_bootstrap_1 =
+/* istanbul ignore next */
+(cov_7ktqjtgiy.s[4]++, require("@ng-bootstrap/ng-bootstrap"));
+const cooperative_service_1 =
+/* istanbul ignore next */
+(cov_7ktqjtgiy.s[5]++, require("./cooperative.service"));
+const cooperative_delete_dialog_component_1 =
+/* istanbul ignore next */
+(cov_7ktqjtgiy.s[6]++, require("./cooperative-delete-dialog.component"));
+
+/* istanbul ignore next */
+cov_7ktqjtgiy.s[7]++;
+let CooperativeComponent = class CooperativeComponent {
+  constructor(cooperativeService, eventManager, modalService) {
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.f[0]++;
+    cov_7ktqjtgiy.s[8]++;
+    this.cooperativeService = cooperativeService;
+
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.s[9]++;
+    this.eventManager = eventManager;
+
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.s[10]++;
+    this.modalService = modalService;
+  }
+
+  loadAll() {
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.f[1]++;
+    cov_7ktqjtgiy.s[11]++;
+    this.cooperativeService.query().subscribe(res => {
+      /* istanbul ignore next */
+      cov_7ktqjtgiy.f[2]++;
+      cov_7ktqjtgiy.s[12]++;
+      return this.cooperatives =
+      /* istanbul ignore next */
+      (cov_7ktqjtgiy.b[0][0]++, res.body) ||
+      /* istanbul ignore next */
+      (cov_7ktqjtgiy.b[0][1]++, []);
+    });
+  }
+
+  ngOnInit() {
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.f[3]++;
+    cov_7ktqjtgiy.s[13]++;
+    this.loadAll();
+
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.s[14]++;
+    this.registerChangeInCooperatives();
+  }
+
+  ngOnDestroy() {
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.f[4]++;
+    cov_7ktqjtgiy.s[15]++;
+
+    if (this.eventSubscriber) {
+      /* istanbul ignore next */
+      cov_7ktqjtgiy.b[1][0]++;
+      cov_7ktqjtgiy.s[16]++;
+      this.eventManager.destroy(this.eventSubscriber);
+    } else
+    /* istanbul ignore next */
+    {
+      cov_7ktqjtgiy.b[1][1]++;
+    }
+  }
+
+  trackId(index, item) {
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.f[5]++;
+    cov_7ktqjtgiy.s[17]++;
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+    return item.id;
+  }
+
+  registerChangeInCooperatives() {
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.f[6]++;
+    cov_7ktqjtgiy.s[18]++;
+    this.eventSubscriber = this.eventManager.subscribe('cooperativeListModification', () => {
+      /* istanbul ignore next */
+      cov_7ktqjtgiy.f[7]++;
+      cov_7ktqjtgiy.s[19]++;
+      return this.loadAll();
+    });
+  }
+
+  delete(cooperative) {
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.f[8]++;
+    const modalRef =
+    /* istanbul ignore next */
+    (cov_7ktqjtgiy.s[20]++, this.modalService.open(cooperative_delete_dialog_component_1.CooperativeDeleteDialogComponent, {
+      size: 'lg',
+      backdrop: 'static'
+    }));
+
+    /* istanbul ignore next */
+    cov_7ktqjtgiy.s[21]++;
+    modalRef.componentInstance.cooperative = cooperative;
+  }
+
+};
+
+/* istanbul ignore next */
+cov_7ktqjtgiy.s[22]++;
+CooperativeComponent = tslib_1.__decorate([core_1.Component({
+  selector: 'jhi-cooperative',
+  template: require('./cooperative.component.html')
+}), tslib_1.__metadata("design:paramtypes", [cooperative_service_1.CooperativeService, ng_jhipster_1.JhiEventManager, ng_bootstrap_1.NgbModal])], CooperativeComponent);
+
+/* istanbul ignore next */
+cov_7ktqjtgiy.s[23]++;
+exports.CooperativeComponent = CooperativeComponent;

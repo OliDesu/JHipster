@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Payment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coopcycle</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.myapp.domain</a> &gt; <span class="el_source">Payment.java</span></div><h1>Payment.java</h1><pre class="source lang-java linenums">package com.mycompany.myapp.domain;
+
+import io.swagger.annotations.ApiModel;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+import com.mycompany.myapp.domain.enumeration.PaymentMethod;
+
+/**
+ * The Payment entity.
+ */
+@ApiModel(description = &quot;The Payment entity.&quot;)
+@Entity
+@Table(name = &quot;payment&quot;)
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+<span class="fc" id="L22">public class Payment implements Serializable {</span>
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = &quot;sequenceGenerator&quot;)
+    @SequenceGenerator(name = &quot;sequenceGenerator&quot;)
+    private Long id;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = &quot;payment_method&quot;, nullable = false)
+    private PaymentMethod paymentMethod;
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+<span class="fc" id="L38">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L42">        this.id = id;</span>
+<span class="fc" id="L43">    }</span>
+
+    public PaymentMethod getPaymentMethod() {
+<span class="fc" id="L46">        return paymentMethod;</span>
+    }
+
+    public Payment paymentMethod(PaymentMethod paymentMethod) {
+<span class="nc" id="L50">        this.paymentMethod = paymentMethod;</span>
+<span class="nc" id="L51">        return this;</span>
+    }
+
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+<span class="nc" id="L55">        this.paymentMethod = paymentMethod;</span>
+<span class="nc" id="L56">    }</span>
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        if (this == o) {</span>
+<span class="fc" id="L62">            return true;</span>
+        }
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (!(o instanceof Payment)) {</span>
+<span class="fc" id="L65">            return false;</span>
+        }
+<span class="fc bfc" id="L67" title="All 4 branches covered.">        return id != null &amp;&amp; id.equals(((Payment) o).id);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L72">        return 31;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L77">        return &quot;Payment{&quot; +</span>
+<span class="fc" id="L78">            &quot;id=&quot; + getId() +</span>
+<span class="fc" id="L79">            &quot;, paymentMethod='&quot; + getPaymentMethod() + &quot;'&quot; +</span>
+            &quot;}&quot;;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

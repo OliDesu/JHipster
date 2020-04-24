@@ -1,0 +1,1093 @@
+48c192a7faecdce5cc18b22945acef8e
+"use strict";
+
+/* istanbul ignore next */
+var cov_2idahcnumg = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/account/register/register.component.ts";
+  var hash = "7f5337d80a205adcd4b6b0ba63471c86581a8cdc";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/account/register/register.component.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 16
+        },
+        end: {
+          line: 5,
+          column: 41
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 22
+        },
+        end: {
+          line: 6,
+          column: 44
+        }
+      },
+      "5": {
+        start: {
+          line: 7,
+          column: 26
+        },
+        end: {
+          line: 7,
+          column: 73
+        }
+      },
+      "6": {
+        start: {
+          line: 8,
+          column: 30
+        },
+        end: {
+          line: 8,
+          column: 75
+        }
+      },
+      "7": {
+        start: {
+          line: 9,
+          column: 27
+        },
+        end: {
+          line: 9,
+          column: 56
+        }
+      },
+      "8": {
+        start: {
+          line: 10,
+          column: 24
+        },
+        end: {
+          line: 62,
+          column: 1
+        }
+      },
+      "9": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 47
+        }
+      },
+      "10": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 51
+        }
+      },
+      "11": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 47
+        }
+      },
+      "12": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 21
+        }
+      },
+      "13": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 32
+        }
+      },
+      "14": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 27
+        }
+      },
+      "15": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 38
+        }
+      },
+      "16": {
+        start: {
+          line: 19,
+          column: 8
+        },
+        end: {
+          line: 19,
+          column: 37
+        }
+      },
+      "17": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 29
+        }
+      },
+      "18": {
+        start: {
+          line: 21,
+          column: 8
+        },
+        end: {
+          line: 26,
+          column: 11
+        }
+      },
+      "19": {
+        start: {
+          line: 29,
+          column: 8
+        },
+        end: {
+          line: 31,
+          column: 9
+        }
+      },
+      "20": {
+        start: {
+          line: 30,
+          column: 12
+        },
+        end: {
+          line: 30,
+          column: 45
+        }
+      },
+      "21": {
+        start: {
+          line: 34,
+          column: 8
+        },
+        end: {
+          line: 34,
+          column: 32
+        }
+      },
+      "22": {
+        start: {
+          line: 35,
+          column: 8
+        },
+        end: {
+          line: 35,
+          column: 27
+        }
+      },
+      "23": {
+        start: {
+          line: 36,
+          column: 8
+        },
+        end: {
+          line: 36,
+          column: 38
+        }
+      },
+      "24": {
+        start: {
+          line: 37,
+          column: 8
+        },
+        end: {
+          line: 37,
+          column: 37
+        }
+      },
+      "25": {
+        start: {
+          line: 38,
+          column: 25
+        },
+        end: {
+          line: 38,
+          column: 66
+        }
+      },
+      "26": {
+        start: {
+          line: 39,
+          column: 8
+        },
+        end: {
+          line: 46,
+          column: 9
+        }
+      },
+      "27": {
+        start: {
+          line: 40,
+          column: 12
+        },
+        end: {
+          line: 40,
+          column: 35
+        }
+      },
+      "28": {
+        start: {
+          line: 43,
+          column: 26
+        },
+        end: {
+          line: 43,
+          column: 64
+        }
+      },
+      "29": {
+        start: {
+          line: 44,
+          column: 26
+        },
+        end: {
+          line: 44,
+          column: 64
+        }
+      },
+      "30": {
+        start: {
+          line: 45,
+          column: 12
+        },
+        end: {
+          line: 45,
+          column: 198
+        }
+      },
+      "31": {
+        start: {
+          line: 45,
+          column: 135
+        },
+        end: {
+          line: 45,
+          column: 154
+        }
+      },
+      "32": {
+        start: {
+          line: 45,
+          column: 169
+        },
+        end: {
+          line: 45,
+          column: 196
+        }
+      },
+      "33": {
+        start: {
+          line: 49,
+          column: 8
+        },
+        end: {
+          line: 49,
+          column: 38
+        }
+      },
+      "34": {
+        start: {
+          line: 52,
+          column: 8
+        },
+        end: {
+          line: 60,
+          column: 9
+        }
+      },
+      "35": {
+        start: {
+          line: 53,
+          column: 12
+        },
+        end: {
+          line: 53,
+          column: 40
+        }
+      },
+      "36": {
+        start: {
+          line: 55,
+          column: 13
+        },
+        end: {
+          line: 60,
+          column: 9
+        }
+      },
+      "37": {
+        start: {
+          line: 56,
+          column: 12
+        },
+        end: {
+          line: 56,
+          column: 41
+        }
+      },
+      "38": {
+        start: {
+          line: 59,
+          column: 12
+        },
+        end: {
+          line: 59,
+          column: 30
+        }
+      },
+      "39": {
+        start: {
+          line: 63,
+          column: 0
+        },
+        end: {
+          line: 66,
+          column: 49
+        }
+      },
+      "40": {
+        start: {
+          line: 67,
+          column: 0
+        },
+        end: {
+          line: 76,
+          column: 22
+        }
+      },
+      "41": {
+        start: {
+          line: 77,
+          column: 0
+        },
+        end: {
+          line: 77,
+          column: 46
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 73
+          },
+          end: {
+            line: 27,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 28,
+            column: 4
+          },
+          end: {
+            line: 28,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 28,
+            column: 22
+          },
+          end: {
+            line: 32,
+            column: 5
+          }
+        },
+        line: 28
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 33,
+            column: 4
+          },
+          end: {
+            line: 33,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 33,
+            column: 15
+          },
+          end: {
+            line: 47,
+            column: 5
+          }
+        },
+        line: 33
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 45,
+            column: 128
+          },
+          end: {
+            line: 45,
+            column: 129
+          }
+        },
+        loc: {
+          start: {
+            line: 45,
+            column: 135
+          },
+          end: {
+            line: 45,
+            column: 154
+          }
+        },
+        line: 45
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 45,
+            column: 157
+          },
+          end: {
+            line: 45,
+            column: 158
+          }
+        },
+        loc: {
+          start: {
+            line: 45,
+            column: 169
+          },
+          end: {
+            line: 45,
+            column: 196
+          }
+        },
+        line: 45
+      },
+      "5": {
+        name: "(anonymous_5)",
+        decl: {
+          start: {
+            line: 48,
+            column: 4
+          },
+          end: {
+            line: 48,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 48,
+            column: 16
+          },
+          end: {
+            line: 50,
+            column: 5
+          }
+        },
+        line: 48
+      },
+      "6": {
+        name: "(anonymous_6)",
+        decl: {
+          start: {
+            line: 51,
+            column: 4
+          },
+          end: {
+            line: 51,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 51,
+            column: 27
+          },
+          end: {
+            line: 61,
+            column: 5
+          }
+        },
+        line: 51
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 29,
+            column: 8
+          },
+          end: {
+            line: 31,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 29,
+            column: 8
+          },
+          end: {
+            line: 31,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 29,
+            column: 8
+          },
+          end: {
+            line: 31,
+            column: 9
+          }
+        }],
+        line: 29
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 39,
+            column: 8
+          },
+          end: {
+            line: 46,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 39,
+            column: 8
+          },
+          end: {
+            line: 46,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 39,
+            column: 8
+          },
+          end: {
+            line: 46,
+            column: 9
+          }
+        }],
+        line: 39
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 52,
+            column: 8
+          },
+          end: {
+            line: 60,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 52,
+            column: 8
+          },
+          end: {
+            line: 60,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 52,
+            column: 8
+          },
+          end: {
+            line: 60,
+            column: 9
+          }
+        }],
+        line: 52
+      },
+      "3": {
+        loc: {
+          start: {
+            line: 52,
+            column: 12
+          },
+          end: {
+            line: 52,
+            column: 104
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 52,
+            column: 12
+          },
+          end: {
+            line: 52,
+            column: 35
+          }
+        }, {
+          start: {
+            line: 52,
+            column: 39
+          },
+          end: {
+            line: 52,
+            column: 104
+          }
+        }],
+        line: 52
+      },
+      "4": {
+        loc: {
+          start: {
+            line: 55,
+            column: 13
+          },
+          end: {
+            line: 60,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 55,
+            column: 13
+          },
+          end: {
+            line: 60,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 55,
+            column: 13
+          },
+          end: {
+            line: 60,
+            column: 9
+          }
+        }],
+        line: 55
+      },
+      "5": {
+        loc: {
+          start: {
+            line: 55,
+            column: 17
+          },
+          end: {
+            line: 55,
+            column: 109
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 55,
+            column: 17
+          },
+          end: {
+            line: 55,
+            column: 40
+          }
+        }, {
+          start: {
+            line: 55,
+            column: 44
+          },
+          end: {
+            line: 55,
+            column: 109
+          }
+        }],
+        line: 55
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 0,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "39": 0,
+      "40": 0,
+      "41": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0],
+      "2": [0, 0],
+      "3": [0, 0],
+      "4": [0, 0],
+      "5": [0, 0]
+    },
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "7f5337d80a205adcd4b6b0ba63471c86581a8cdc"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_2idahcnumg.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_2idahcnumg.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_2idahcnumg.s[2]++, require("@angular/core"));
+const forms_1 =
+/* istanbul ignore next */
+(cov_2idahcnumg.s[3]++, require("@angular/forms"));
+const ng_jhipster_1 =
+/* istanbul ignore next */
+(cov_2idahcnumg.s[4]++, require("ng-jhipster"));
+const error_constants_1 =
+/* istanbul ignore next */
+(cov_2idahcnumg.s[5]++, require("app/shared/constants/error.constants"));
+const login_modal_service_1 =
+/* istanbul ignore next */
+(cov_2idahcnumg.s[6]++, require("app/core/login/login-modal.service"));
+const register_service_1 =
+/* istanbul ignore next */
+(cov_2idahcnumg.s[7]++, require("./register.service"));
+
+/* istanbul ignore next */
+cov_2idahcnumg.s[8]++;
+let RegisterComponent = class RegisterComponent {
+  constructor(languageService, loginModalService, registerService, fb) {
+    /* istanbul ignore next */
+    cov_2idahcnumg.f[0]++;
+    cov_2idahcnumg.s[9]++;
+    this.languageService = languageService;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[10]++;
+    this.loginModalService = loginModalService;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[11]++;
+    this.registerService = registerService;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[12]++;
+    this.fb = fb;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[13]++;
+    this.doNotMatch = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[14]++;
+    this.error = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[15]++;
+    this.errorEmailExists = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[16]++;
+    this.errorUserExists = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[17]++;
+    this.success = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[18]++;
+    this.registerForm = this.fb.group({
+      login: ['', [forms_1.Validators.required, forms_1.Validators.minLength(1), forms_1.Validators.maxLength(50), forms_1.Validators.pattern('^[_.@A-Za-z0-9-]*$')]],
+      email: ['', [forms_1.Validators.required, forms_1.Validators.minLength(5), forms_1.Validators.maxLength(254), forms_1.Validators.email]],
+      password: ['', [forms_1.Validators.required, forms_1.Validators.minLength(4), forms_1.Validators.maxLength(50)]],
+      confirmPassword: ['', [forms_1.Validators.required, forms_1.Validators.minLength(4), forms_1.Validators.maxLength(50)]]
+    });
+  }
+
+  ngAfterViewInit() {
+    /* istanbul ignore next */
+    cov_2idahcnumg.f[1]++;
+    cov_2idahcnumg.s[19]++;
+
+    if (this.login) {
+      /* istanbul ignore next */
+      cov_2idahcnumg.b[0][0]++;
+      cov_2idahcnumg.s[20]++;
+      this.login.nativeElement.focus();
+    } else
+    /* istanbul ignore next */
+    {
+      cov_2idahcnumg.b[0][1]++;
+    }
+  }
+
+  register() {
+    /* istanbul ignore next */
+    cov_2idahcnumg.f[2]++;
+    cov_2idahcnumg.s[21]++;
+    this.doNotMatch = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[22]++;
+    this.error = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[23]++;
+    this.errorEmailExists = false;
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[24]++;
+    this.errorUserExists = false;
+    const password =
+    /* istanbul ignore next */
+    (cov_2idahcnumg.s[25]++, this.registerForm.get(['password']).value);
+
+    /* istanbul ignore next */
+    cov_2idahcnumg.s[26]++;
+
+    if (password !== this.registerForm.get(['confirmPassword']).value) {
+      /* istanbul ignore next */
+      cov_2idahcnumg.b[1][0]++;
+      cov_2idahcnumg.s[27]++;
+      this.doNotMatch = true;
+    } else {
+      /* istanbul ignore next */
+      cov_2idahcnumg.b[1][1]++;
+      const login =
+      /* istanbul ignore next */
+      (cov_2idahcnumg.s[28]++, this.registerForm.get(['login']).value);
+      const email =
+      /* istanbul ignore next */
+      (cov_2idahcnumg.s[29]++, this.registerForm.get(['email']).value);
+
+      /* istanbul ignore next */
+      cov_2idahcnumg.s[30]++;
+      this.registerService.save({
+        login,
+        email,
+        password,
+        langKey: this.languageService.getCurrentLanguage()
+      }).subscribe(() => {
+        /* istanbul ignore next */
+        cov_2idahcnumg.f[3]++;
+        cov_2idahcnumg.s[31]++;
+        return this.success = true;
+      }, response => {
+        /* istanbul ignore next */
+        cov_2idahcnumg.f[4]++;
+        cov_2idahcnumg.s[32]++;
+        return this.processError(response);
+      });
+    }
+  }
+
+  openLogin() {
+    /* istanbul ignore next */
+    cov_2idahcnumg.f[5]++;
+    cov_2idahcnumg.s[33]++;
+    this.loginModalService.open();
+  }
+
+  processError(response) {
+    /* istanbul ignore next */
+    cov_2idahcnumg.f[6]++;
+    cov_2idahcnumg.s[34]++;
+
+    if (
+    /* istanbul ignore next */
+    (cov_2idahcnumg.b[3][0]++, response.status === 400) &&
+    /* istanbul ignore next */
+    (cov_2idahcnumg.b[3][1]++, response.error.type === error_constants_1.LOGIN_ALREADY_USED_TYPE)) {
+      /* istanbul ignore next */
+      cov_2idahcnumg.b[2][0]++;
+      cov_2idahcnumg.s[35]++;
+      this.errorUserExists = true;
+    } else {
+      /* istanbul ignore next */
+      cov_2idahcnumg.b[2][1]++;
+      cov_2idahcnumg.s[36]++;
+
+      if (
+      /* istanbul ignore next */
+      (cov_2idahcnumg.b[5][0]++, response.status === 400) &&
+      /* istanbul ignore next */
+      (cov_2idahcnumg.b[5][1]++, response.error.type === error_constants_1.EMAIL_ALREADY_USED_TYPE)) {
+        /* istanbul ignore next */
+        cov_2idahcnumg.b[4][0]++;
+        cov_2idahcnumg.s[37]++;
+        this.errorEmailExists = true;
+      } else {
+        /* istanbul ignore next */
+        cov_2idahcnumg.b[4][1]++;
+        cov_2idahcnumg.s[38]++;
+        this.error = true;
+      }
+    }
+  }
+
+};
+
+/* istanbul ignore next */
+cov_2idahcnumg.s[39]++;
+
+tslib_1.__decorate([core_1.ViewChild('login', {
+  static: false
+}), tslib_1.__metadata("design:type", core_1.ElementRef)], RegisterComponent.prototype, "login", void 0);
+
+/* istanbul ignore next */
+cov_2idahcnumg.s[40]++;
+RegisterComponent = tslib_1.__decorate([core_1.Component({
+  selector: 'jhi-register',
+  template: require('./register.component.html')
+}), tslib_1.__metadata("design:paramtypes", [ng_jhipster_1.JhiLanguageService, login_modal_service_1.LoginModalService, register_service_1.RegisterService, forms_1.FormBuilder])], RegisterComponent);
+
+/* istanbul ignore next */
+cov_2idahcnumg.s[41]++;
+exports.RegisterComponent = RegisterComponent;

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BasketResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coopcycle</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.myapp.web.rest</a> &gt; <span class="el_source">BasketResource.java</span></div><h1>BasketResource.java</h1><pre class="source lang-java linenums">package com.mycompany.myapp.web.rest;
+
+import com.mycompany.myapp.domain.Basket;
+import com.mycompany.myapp.repository.BasketRepository;
+import com.mycompany.myapp.web.rest.errors.BadRequestAlertException;
+
+import io.github.jhipster.web.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing {@link com.mycompany.myapp.domain.Basket}.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+@Transactional
+public class BasketResource {
+
+<span class="fc" id="L30">    private final Logger log = LoggerFactory.getLogger(BasketResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;basket&quot;;
+
+    @Value(&quot;${jhipster.clientApp.name}&quot;)
+    private String applicationName;
+
+    private final BasketRepository basketRepository;
+
+<span class="fc" id="L39">    public BasketResource(BasketRepository basketRepository) {</span>
+<span class="fc" id="L40">        this.basketRepository = basketRepository;</span>
+<span class="fc" id="L41">    }</span>
+
+    /**
+     * {@code POST  /baskets} : Create a new basket.
+     *
+     * @param basket the basket to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new basket, or with status {@code 400 (Bad Request)} if the basket has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping(&quot;/baskets&quot;)
+    public ResponseEntity&lt;Basket&gt; createBasket(@Valid @RequestBody Basket basket) throws URISyntaxException {
+<span class="fc" id="L52">        log.debug(&quot;REST request to save Basket : {}&quot;, basket);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (basket.getId() != null) {</span>
+<span class="fc" id="L54">            throw new BadRequestAlertException(&quot;A new basket cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L56">        Basket result = basketRepository.save(basket);</span>
+<span class="fc" id="L57">        return ResponseEntity.created(new URI(&quot;/api/baskets/&quot; + result.getId()))</span>
+<span class="fc" id="L58">            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L59">            .body(result);</span>
+    }
+
+    /**
+     * {@code PUT  /baskets} : Updates an existing basket.
+     *
+     * @param basket the basket to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated basket,
+     * or with status {@code 400 (Bad Request)} if the basket is not valid,
+     * or with status {@code 500 (Internal Server Error)} if the basket couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PutMapping(&quot;/baskets&quot;)
+    public ResponseEntity&lt;Basket&gt; updateBasket(@Valid @RequestBody Basket basket) throws URISyntaxException {
+<span class="fc" id="L73">        log.debug(&quot;REST request to update Basket : {}&quot;, basket);</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        if (basket.getId() == null) {</span>
+<span class="fc" id="L75">            throw new BadRequestAlertException(&quot;Invalid id&quot;, ENTITY_NAME, &quot;idnull&quot;);</span>
+        }
+<span class="fc" id="L77">        Basket result = basketRepository.save(basket);</span>
+<span class="fc" id="L78">        return ResponseEntity.ok()</span>
+<span class="fc" id="L79">            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, basket.getId().toString()))</span>
+<span class="fc" id="L80">            .body(result);</span>
+    }
+
+    /**
+     * {@code GET  /baskets} : get all the baskets.
+     *
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of baskets in body.
+     */
+    @GetMapping(&quot;/baskets&quot;)
+    public List&lt;Basket&gt; getAllBaskets() {
+<span class="fc" id="L90">        log.debug(&quot;REST request to get all Baskets&quot;);</span>
+<span class="fc" id="L91">        return basketRepository.findAll();</span>
+    }
+
+    /**
+     * {@code GET  /baskets/:id} : get the &quot;id&quot; basket.
+     *
+     * @param id the id of the basket to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the basket, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping(&quot;/baskets/{id}&quot;)
+    public ResponseEntity&lt;Basket&gt; getBasket(@PathVariable Long id) {
+<span class="fc" id="L102">        log.debug(&quot;REST request to get Basket : {}&quot;, id);</span>
+<span class="fc" id="L103">        Optional&lt;Basket&gt; basket = basketRepository.findById(id);</span>
+<span class="fc" id="L104">        return ResponseUtil.wrapOrNotFound(basket);</span>
+    }
+
+    /**
+     * {@code DELETE  /baskets/:id} : delete the &quot;id&quot; basket.
+     *
+     * @param id the id of the basket to delete.
+     * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
+     */
+    @DeleteMapping(&quot;/baskets/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deleteBasket(@PathVariable Long id) {
+<span class="fc" id="L115">        log.debug(&quot;REST request to delete Basket : {}&quot;, id);</span>
+<span class="fc" id="L116">        basketRepository.deleteById(id);</span>
+<span class="fc" id="L117">        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

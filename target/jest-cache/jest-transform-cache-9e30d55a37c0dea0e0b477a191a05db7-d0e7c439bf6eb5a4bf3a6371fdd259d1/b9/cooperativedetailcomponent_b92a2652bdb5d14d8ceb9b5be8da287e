@@ -1,0 +1,42 @@
+4802eaebca6114ab67ba9e742497892c
+/* istanbul ignore next */
+var cov_1ihk63gaa9 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/cooperative/cooperative-detail.component.html";
+  var hash = "7ba79dc48c41c1208c14ef51758b46174a1fa8cd";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/cooperative/cooperative-detail.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 2019
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "7ba79dc48c41c1208c14ef51758b46174a1fa8cd"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1ihk63gaa9.s[0]++;
+module.exports = "<div class=\"row justify-content-center\">\n    <div class=\"col-8\">\n        <div *ngIf=\"cooperative\">\n            <h2><span jhiTranslate=\"coopcycleApp.cooperative.detail.title\">Cooperative</span> {{ cooperative.id }}</h2>\n\n            <hr>\n\n            <jhi-alert-error></jhi-alert-error>\n\n            <dl class=\"row-md jh-entity-details\">\n                <dt><span jhiTranslate=\"coopcycleApp.cooperative.cooperativeId\">Cooperative Id</span></dt>\n                <dd>\n                    <span>{{ cooperative.cooperativeId }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.cooperative.name\">Name</span></dt>\n                <dd>\n                    <span>{{ cooperative.name }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.cooperative.area\">Area</span></dt>\n                <dd>\n                    <span>{{ cooperative.area }}</span>\n                </dd>\n                <dt><span jhiTranslate=\"coopcycleApp.cooperative.restaurant\">Restaurant</span></dt>\n                <dd>\n                    <span *ngFor=\"let restaurant of cooperative.restaurants; let last = last\">\n                        <a [routerLink]=\"['/restaurant', restaurant?.id, 'view']\">{{ restaurant.id }}</a>{{ last ? '' : ', ' }}\n                    </span>\n                </dd>\n            </dl>\n\n            <button type=\"submit\"\n                    (click)=\"previousState()\"\n                    class=\"btn btn-info\">\n                <fa-icon icon=\"arrow-left\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.back\">Back</span>\n            </button>\n\n            <button type=\"button\"\n                    [routerLink]=\"['/cooperative', cooperative.id, 'edit']\"\n                    class=\"btn btn-primary\">\n                <fa-icon icon=\"pencil-alt\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.edit\">Edit</span>\n            </button>\n        </div>\n    </div>\n</div>\n";

@@ -1,0 +1,326 @@
+9eaefd5cb24ba2c63ae171f5bfe85125
+"use strict";
+
+/* istanbul ignore next */
+var cov_z5oxas5t3 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/course/course-detail.component.ts";
+  var hash = "db7da3ad14d5901f384a9284be5c2c79a04b47c5";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/course/course-detail.component.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 17
+        },
+        end: {
+          line: 5,
+          column: 43
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 28
+        },
+        end: {
+          line: 17,
+          column: 1
+        }
+      },
+      "5": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 45
+        }
+      },
+      "6": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 27
+        }
+      },
+      "7": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 83
+        }
+      },
+      "8": {
+        start: {
+          line: 12,
+          column: 60
+        },
+        end: {
+          line: 12,
+          column: 80
+        }
+      },
+      "9": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 30
+        }
+      },
+      "10": {
+        start: {
+          line: 18,
+          column: 0
+        },
+        end: {
+          line: 24,
+          column: 26
+        }
+      },
+      "11": {
+        start: {
+          line: 25,
+          column: 0
+        },
+        end: {
+          line: 25,
+          column: 54
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 32
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 15
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 12,
+            column: 43
+          },
+          end: {
+            line: 12,
+            column: 44
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 60
+          },
+          end: {
+            line: 12,
+            column: 80
+          }
+        },
+        line: 12
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 14,
+            column: 4
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 20
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 14
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "db7da3ad14d5901f384a9284be5c2c79a04b47c5"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_z5oxas5t3.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_z5oxas5t3.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_z5oxas5t3.s[2]++, require("@angular/core"));
+const router_1 =
+/* istanbul ignore next */
+(cov_z5oxas5t3.s[3]++, require("@angular/router"));
+
+/* istanbul ignore next */
+cov_z5oxas5t3.s[4]++;
+let CourseDetailComponent = class CourseDetailComponent {
+  constructor(activatedRoute) {
+    /* istanbul ignore next */
+    cov_z5oxas5t3.f[0]++;
+    cov_z5oxas5t3.s[5]++;
+    this.activatedRoute = activatedRoute;
+
+    /* istanbul ignore next */
+    cov_z5oxas5t3.s[6]++;
+    this.course = null;
+  }
+
+  ngOnInit() {
+    /* istanbul ignore next */
+    cov_z5oxas5t3.f[1]++;
+    cov_z5oxas5t3.s[7]++;
+    this.activatedRoute.data.subscribe(({
+      course
+    }) => {
+      /* istanbul ignore next */
+      cov_z5oxas5t3.f[2]++;
+      cov_z5oxas5t3.s[8]++;
+      return this.course = course;
+    });
+  }
+
+  previousState() {
+    /* istanbul ignore next */
+    cov_z5oxas5t3.f[3]++;
+    cov_z5oxas5t3.s[9]++;
+    window.history.back();
+  }
+
+};
+
+/* istanbul ignore next */
+cov_z5oxas5t3.s[10]++;
+CourseDetailComponent = tslib_1.__decorate([core_1.Component({
+  selector: 'jhi-course-detail',
+  template: require('./course-detail.component.html')
+}), tslib_1.__metadata("design:paramtypes", [router_1.ActivatedRoute])], CourseDetailComponent);
+
+/* istanbul ignore next */
+cov_z5oxas5t3.s[11]++;
+exports.CourseDetailComponent = CourseDetailComponent;

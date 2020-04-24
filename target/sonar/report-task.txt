@@ -1,0 +1,6 @@
+projectKey=coopcycle
+serverUrl=http://localhost:9001
+serverVersion=8.2.0.32929
+dashboardUrl=http://localhost:9001/dashboard?id=coopcycle
+ceTaskId=AXGnYIqU-63tZYGHfZwV
+ceTaskUrl=http://localhost:9001/api/ce/task?id=AXGnYIqU-63tZYGHfZwV

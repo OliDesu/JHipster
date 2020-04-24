@@ -1,0 +1,283 @@
+ff167fde2cffd2be0ee91c9507f637de
+"use strict";
+
+/* istanbul ignore next */
+var cov_15t7ay9uh9 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/user-management/user-management-detail.component.ts";
+  var hash = "b926a1a24a4c06a5b4fcbb7c425b01d4dae7a97d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/admin/user-management/user-management-detail.component.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 15
+        },
+        end: {
+          line: 4,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 17
+        },
+        end: {
+          line: 5,
+          column: 43
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 36
+        },
+        end: {
+          line: 14,
+          column: 1
+        }
+      },
+      "5": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 27
+        }
+      },
+      "6": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 25
+        }
+      },
+      "7": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 68
+        }
+      },
+      "8": {
+        start: {
+          line: 12,
+          column: 49
+        },
+        end: {
+          line: 12,
+          column: 65
+        }
+      },
+      "9": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 21,
+          column: 34
+        }
+      },
+      "10": {
+        start: {
+          line: 22,
+          column: 0
+        },
+        end: {
+          line: 22,
+          column: 70
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 23
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 15
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 12,
+            column: 34
+          },
+          end: {
+            line: 12,
+            column: 35
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 49
+          },
+          end: {
+            line: 12,
+            column: 65
+          }
+        },
+        line: 12
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "b926a1a24a4c06a5b4fcbb7c425b01d4dae7a97d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_15t7ay9uh9.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+const tslib_1 =
+/* istanbul ignore next */
+(cov_15t7ay9uh9.s[1]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_15t7ay9uh9.s[2]++, require("@angular/core"));
+const router_1 =
+/* istanbul ignore next */
+(cov_15t7ay9uh9.s[3]++, require("@angular/router"));
+
+/* istanbul ignore next */
+cov_15t7ay9uh9.s[4]++;
+let UserManagementDetailComponent = class UserManagementDetailComponent {
+  constructor(route) {
+    /* istanbul ignore next */
+    cov_15t7ay9uh9.f[0]++;
+    cov_15t7ay9uh9.s[5]++;
+    this.route = route;
+
+    /* istanbul ignore next */
+    cov_15t7ay9uh9.s[6]++;
+    this.user = null;
+  }
+
+  ngOnInit() {
+    /* istanbul ignore next */
+    cov_15t7ay9uh9.f[1]++;
+    cov_15t7ay9uh9.s[7]++;
+    this.route.data.subscribe(({
+      user
+    }) => {
+      /* istanbul ignore next */
+      cov_15t7ay9uh9.f[2]++;
+      cov_15t7ay9uh9.s[8]++;
+      return this.user = user;
+    });
+  }
+
+};
+
+/* istanbul ignore next */
+cov_15t7ay9uh9.s[9]++;
+UserManagementDetailComponent = tslib_1.__decorate([core_1.Component({
+  selector: 'jhi-user-mgmt-detail',
+  template: require('./user-management-detail.component.html')
+}), tslib_1.__metadata("design:paramtypes", [router_1.ActivatedRoute])], UserManagementDetailComponent);
+
+/* istanbul ignore next */
+cov_15t7ay9uh9.s[10]++;
+exports.UserManagementDetailComponent = UserManagementDetailComponent;

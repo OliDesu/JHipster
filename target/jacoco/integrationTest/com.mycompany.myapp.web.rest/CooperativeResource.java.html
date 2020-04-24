@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CooperativeResource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coopcycle</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.myapp.web.rest</a> &gt; <span class="el_source">CooperativeResource.java</span></div><h1>CooperativeResource.java</h1><pre class="source lang-java linenums">package com.mycompany.myapp.web.rest;
+
+import com.mycompany.myapp.domain.Cooperative;
+import com.mycompany.myapp.repository.CooperativeRepository;
+import com.mycompany.myapp.web.rest.errors.BadRequestAlertException;
+
+import io.github.jhipster.web.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * REST controller for managing {@link com.mycompany.myapp.domain.Cooperative}.
+ */
+@RestController
+@RequestMapping(&quot;/api&quot;)
+@Transactional
+public class CooperativeResource {
+
+<span class="fc" id="L30">    private final Logger log = LoggerFactory.getLogger(CooperativeResource.class);</span>
+
+    private static final String ENTITY_NAME = &quot;cooperative&quot;;
+
+    @Value(&quot;${jhipster.clientApp.name}&quot;)
+    private String applicationName;
+
+    private final CooperativeRepository cooperativeRepository;
+
+<span class="fc" id="L39">    public CooperativeResource(CooperativeRepository cooperativeRepository) {</span>
+<span class="fc" id="L40">        this.cooperativeRepository = cooperativeRepository;</span>
+<span class="fc" id="L41">    }</span>
+
+    /**
+     * {@code POST  /cooperatives} : Create a new cooperative.
+     *
+     * @param cooperative the cooperative to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new cooperative, or with status {@code 400 (Bad Request)} if the cooperative has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping(&quot;/cooperatives&quot;)
+    public ResponseEntity&lt;Cooperative&gt; createCooperative(@Valid @RequestBody Cooperative cooperative) throws URISyntaxException {
+<span class="fc" id="L52">        log.debug(&quot;REST request to save Cooperative : {}&quot;, cooperative);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (cooperative.getId() != null) {</span>
+<span class="fc" id="L54">            throw new BadRequestAlertException(&quot;A new cooperative cannot already have an ID&quot;, ENTITY_NAME, &quot;idexists&quot;);</span>
+        }
+<span class="fc" id="L56">        Cooperative result = cooperativeRepository.save(cooperative);</span>
+<span class="fc" id="L57">        return ResponseEntity.created(new URI(&quot;/api/cooperatives/&quot; + result.getId()))</span>
+<span class="fc" id="L58">            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))</span>
+<span class="fc" id="L59">            .body(result);</span>
+    }
+
+    /**
+     * {@code PUT  /cooperatives} : Updates an existing cooperative.
+     *
+     * @param cooperative the cooperative to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated cooperative,
+     * or with status {@code 400 (Bad Request)} if the cooperative is not valid,
+     * or with status {@code 500 (Internal Server Error)} if the cooperative couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PutMapping(&quot;/cooperatives&quot;)
+    public ResponseEntity&lt;Cooperative&gt; updateCooperative(@Valid @RequestBody Cooperative cooperative) throws URISyntaxException {
+<span class="fc" id="L73">        log.debug(&quot;REST request to update Cooperative : {}&quot;, cooperative);</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        if (cooperative.getId() == null) {</span>
+<span class="fc" id="L75">            throw new BadRequestAlertException(&quot;Invalid id&quot;, ENTITY_NAME, &quot;idnull&quot;);</span>
+        }
+<span class="fc" id="L77">        Cooperative result = cooperativeRepository.save(cooperative);</span>
+<span class="fc" id="L78">        return ResponseEntity.ok()</span>
+<span class="fc" id="L79">            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, cooperative.getId().toString()))</span>
+<span class="fc" id="L80">            .body(result);</span>
+    }
+
+    /**
+     * {@code GET  /cooperatives} : get all the cooperatives.
+     *
+     * @param eagerload flag to eager load entities from relationships (This is applicable for many-to-many).
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of cooperatives in body.
+     */
+    @GetMapping(&quot;/cooperatives&quot;)
+    public List&lt;Cooperative&gt; getAllCooperatives(@RequestParam(required = false, defaultValue = &quot;false&quot;) boolean eagerload) {
+<span class="fc" id="L91">        log.debug(&quot;REST request to get all Cooperatives&quot;);</span>
+<span class="fc" id="L92">        return cooperativeRepository.findAllWithEagerRelationships();</span>
+    }
+
+    /**
+     * {@code GET  /cooperatives/:id} : get the &quot;id&quot; cooperative.
+     *
+     * @param id the id of the cooperative to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the cooperative, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping(&quot;/cooperatives/{id}&quot;)
+    public ResponseEntity&lt;Cooperative&gt; getCooperative(@PathVariable Long id) {
+<span class="fc" id="L103">        log.debug(&quot;REST request to get Cooperative : {}&quot;, id);</span>
+<span class="fc" id="L104">        Optional&lt;Cooperative&gt; cooperative = cooperativeRepository.findOneWithEagerRelationships(id);</span>
+<span class="fc" id="L105">        return ResponseUtil.wrapOrNotFound(cooperative);</span>
+    }
+
+    /**
+     * {@code DELETE  /cooperatives/:id} : delete the &quot;id&quot; cooperative.
+     *
+     * @param id the id of the cooperative to delete.
+     * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
+     */
+    @DeleteMapping(&quot;/cooperatives/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deleteCooperative(@PathVariable Long id) {
+<span class="fc" id="L116">        log.debug(&quot;REST request to delete Cooperative : {}&quot;, id);</span>
+<span class="fc" id="L117">        cooperativeRepository.deleteById(id);</span>
+<span class="fc" id="L118">        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,0 +1,42 @@
+24a4cfbd8494004a6058bef76295363d
+/* istanbul ignore next */
+var cov_1cd2h260a0 = function () {
+  var path = "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/payment/payment-delete-dialog.component.html";
+  var hash = "4ea3420d6c9909e321b98d157cefebfeeda5f0e9";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/ali/exemple-jhipster/testbed/src/main/webapp/app/entities/payment/payment-delete-dialog.component.html",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 0
+        },
+        end: {
+          line: 1,
+          column: 1204
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "4ea3420d6c9909e321b98d157cefebfeeda5f0e9"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_1cd2h260a0.s[0]++;
+module.exports = "<form *ngIf=\"payment\" name=\"deleteForm\" (ngSubmit)=\"confirmDelete(payment?.id!)\">\n    <div class=\"modal-header\">\n        <h4 class=\"modal-title\" jhiTranslate=\"entity.delete.title\">Confirm delete operation</h4>\n\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\"\n                (click)=\"cancel()\">&times;</button>\n    </div>\n\n    <div class=\"modal-body\">\n        <jhi-alert-error></jhi-alert-error>\n\n        <p id=\"jhi-delete-payment-heading\" jhiTranslate=\"coopcycleApp.payment.delete.question\" [translateValues]=\"{ id: payment.id }\">Are you sure you want to delete this Payment?</p>\n    </div>\n\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" (click)=\"cancel()\">\n            <fa-icon icon=\"ban\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.cancel\">Cancel</span>\n        </button>\n\n        <button id=\"jhi-confirm-delete-payment\" type=\"submit\" class=\"btn btn-danger\">\n            <fa-icon icon=\"times\"></fa-icon>&nbsp;<span jhiTranslate=\"entity.action.delete\">Delete</span>\n        </button>\n    </div>\n</form>\n";
